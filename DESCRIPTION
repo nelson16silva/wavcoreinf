@@ -1,6 +1,6 @@
 Package: wavcoreinf
 Type: Package
-Title: Estimation and Evaluation of Wavelet Corex Inflation Measures
+Title: Estimation and Evaluation of Wavelet Core Inflation Measures
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Nelson",
