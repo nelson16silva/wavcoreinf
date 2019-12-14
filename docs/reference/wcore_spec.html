@@ -155,9 +155,10 @@ variables  used in functions of type <code><a href='wav_args.html'>wav_args</a><
 
 <span class='no'>core_wavelet2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_table.html'>wcore_table</a></span>(<span class='no'>core_wavelet</span>, <span class='no'>inf_head_ts</span>)
 
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary.html'>wcore_summary</a></span>(<span class='no'>core_wavelet2</span>, <span class='no'>inf_head</span>)
-
-<span class='fu'>wcore_spec</span>(<span class='no'>x</span>, <span class='no'>wavelet</span> <span class='kw'>==</span> <span class='st'>"haar"</span>)</div><div class='output co'>#&gt; # A tibble: 302 x 2
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary.html'>wcore_summary</a></span>(<span class='no'>core_wavelet2</span>, <span class='no'>inf_head</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: unnest() has a new interface. See ?unnest for details.</span>
+#&gt; <span class='warning'>Try `df %&gt;% unnest(c(sd, mav25, no_bias, dyn_inf, dyn_core))`, with `mutate()` if needed</span></div><div class='input'>
+<span class='fu'>wcore_spec</span>(<span class='no'>x</span>, <span class='no'>wavelet</span> <span class='kw'>==</span> <span class='st'>"haar"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: unnest() has a new interface. See ?unnest for details.</span>
+#&gt; <span class='warning'>Try `df %&gt;% unnest(c(date, x_sm))`, with `mutate()` if needed</span></div><div class='output co'>#&gt; # A tibble: 302 x 2
 #&gt;     date median
 #&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 #&gt;  1 1994.   6.83

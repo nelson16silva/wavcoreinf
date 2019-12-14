@@ -160,11 +160,12 @@ one model is selected, this function calculates the median of the models.</p>
                                 <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>inf_head</span>, <span class='kw'>lags</span> <span class='kw'>=</span> <span class='fu'><a href='lags.html'>lags</a></span>(<span class='fl'>2</span>,<span class='fl'>1</span>),
                                 <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>RMSE</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
-<span class='no'>wavcore_smry</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary_fcast.html'>wcore_summary_fcast</a></span>(<span class='no'>inf_head</span>, <span class='no'>core_wavelet2</span>, <span class='no'>err_wcore</span>)
-
+<span class='no'>wavcore_smry</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary_fcast.html'>wcore_summary_fcast</a></span>(<span class='no'>inf_head</span>, <span class='no'>core_wavelet2</span>, <span class='no'>err_wcore</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: unnest() has a new interface. See ?unnest for details.</span>
+#&gt; <span class='warning'>Try `df %&gt;% unnest(c(sd, mav25, no_bias, dyn_inf, dyn_core))`, with `mutate()` if needed</span></div><div class='input'>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary_best.html'>wcore_summary_best</a></span>(<span class='no'>wavcore_smry</span>)
 
-<span class='fu'>wcore_best_median</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; # A tibble: 302 x 2
+<span class='fu'>wcore_best_median</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: unnest() has a new interface. See ?unnest for details.</span>
+#&gt; <span class='warning'>Try `df %&gt;% unnest(c(date, x_sm))`, with `mutate()` if needed</span></div><div class='output co'>#&gt; # A tibble: 302 x 2
 #&gt;     date wcore_med
 #&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 #&gt;  1 1994.      6.80

@@ -190,8 +190,8 @@ issue Sum, pages 289-313.</p>
                                 <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>inf_head</span>, <span class='kw'>lags</span> <span class='kw'>=</span> <span class='fu'><a href='lags.html'>lags</a></span>(<span class='fl'>2</span>,<span class='fl'>1</span>),
                                 <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>RMSE</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
-<span class='no'>wavcore_smry</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary_fcast.html'>wcore_summary_fcast</a></span>(<span class='no'>inf_head</span>, <span class='no'>core_wavelet2</span>, <span class='no'>err_wcore</span>)
-
+<span class='no'>wavcore_smry</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wcore_summary_fcast.html'>wcore_summary_fcast</a></span>(<span class='no'>inf_head</span>, <span class='no'>core_wavelet2</span>, <span class='no'>err_wcore</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: unnest() has a new interface. See ?unnest for details.</span>
+#&gt; <span class='warning'>Try `df %&gt;% unnest(c(sd, mav25, no_bias, dyn_inf, dyn_core))`, with `mutate()` if needed</span></div><div class='input'>
 <span class='fu'>wcore_summary_best</span>(<span class='no'>wavcore_smry</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 13
 #&gt;   wavelet n.level x_sm  date  error    sd mav25 no_bias  alpha    val_p alpha1
 #&gt;   &lt;chr&gt;     &lt;int&gt; &lt;lis&gt; &lt;lis&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
