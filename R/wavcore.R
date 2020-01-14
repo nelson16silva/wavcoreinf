@@ -208,7 +208,7 @@ wav_args_wthr <- function(wdlist, thrlist, lr) {
 #' calls \code{\link{smooth_wavelet}} for the estimation of the wavelet-based signal.
 #'
 #' @param x A vector or a time series containing the data (headline inflation).
-#' @param y An objetc of class args_wshr, args_ebthr or args_wthr. Those
+#' @param y An object of class args_wshr, args_ebthr or args_wthr. Those
 #' objects can be obtained through functions \code{\link{wav_args_ebthr}},
 #' \code{\link{wav_args_wshr}} and \code{\link{wav_args_wthr}}.
 #'
