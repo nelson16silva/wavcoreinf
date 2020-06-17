@@ -9,7 +9,7 @@ wav_smooth(x, y)
 \arguments{
 \item{x}{A vector or a time series containing the data (headline inflation).}
 
-\item{y}{An objetc of class args_wshr, args_ebthr or args_wthr. Those
+\item{y}{An object of class args_wshr, args_ebthr or args_wthr. Those
 objects can be obtained through functions \code{\link{wav_args_ebthr}},
 \code{\link{wav_args_wshr}} and \code{\link{wav_args_wthr}}.}
 }

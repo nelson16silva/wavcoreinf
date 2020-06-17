@@ -23,7 +23,7 @@ Extract data from Central Bank of Brazil statistical database \href{https://www3
 # 11427 ex0 (core inflation)
 n <- c(433, 11427)
 x <- c("ipca", "ex0")
-# Sys.setenv(no_proxy = "bcb.gov.br") # configuration for internal bcb conexion
+# Sys.setenv(no_proxy = "bcb.gov.br") # configuration for internal bcb connection
 inf <- getsgs(x, n)
 }
 }

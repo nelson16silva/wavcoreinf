@@ -113,7 +113,7 @@ wcore_summary_fcast <- function(y, wcoretbl, error) {
     wcore_summary(., y)
 }
 
-#' Choice Best Wavelet Model
+#' Choose Best Wavelet Model
 #'
 #' \code{wcore_summary_best} choices wavelet models that are the most
 #' favorables in terms of statistics calculated by the function
