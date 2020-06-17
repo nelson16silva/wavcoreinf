@@ -2,7 +2,7 @@
 % Please edit documentation in R/summary.R
 \name{wcore_summary_best}
 \alias{wcore_summary_best}
-\title{Choice Best Wavelet Model}
+\title{Choose Best Wavelet Model}
 \usage{
 wcore_summary_best(x, d = c(1, 1, 1, 1, 1))
 }
