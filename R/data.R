@@ -39,8 +39,8 @@
 #' \item{ipcaex3}{\emph{Broad national consumer price index - Core exclusion - EX3}. Considers
 #' only the underlying items of the services and industrial goods groups.}
 #' }
-#' @source Series can be obtained from function \code{\link{getsgs}} or by codes 433, 11427, 16121,  27838,  27839,  11426,  4466, 16122
-#' in: \cr
+#' @source Series can be obtained from function \code{\link{getsgs}} or by codes: 433, 11427, 16121,  27838,  27839,  11426,  4466, 16122
+#' in the \cr
 #' \href{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}{Time Series Management System}
 #'
 #' @references Central Bank of Brazil (2018). New core inflation measures.

@@ -2,7 +2,7 @@
 #'
 #' This function is only a convenient way to estimate an OLS model from a data
 #' frame where the first variable is the dependent one of the model and the
-#' remaining are the regressors. This functions is used internally
+#' remaining are the regressors. This function is used internally
 #' by other functions.
 #'
 #' @param df A data frame or a tibble. First column of the data frame must be the \eqn{y}

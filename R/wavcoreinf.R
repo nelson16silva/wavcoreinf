@@ -16,8 +16,8 @@
 #' \item \code{EbayesThresh}
 #' \item \code{wavethresh}
 #' }
-#' The specific methods are explained in the help page of
-#' functions: \code{wmtsa::\link[wmtsa]{wavShrink}}, \cr
+#' The specific methods are explained on the help page of
+#' the functions: \code{wmtsa::\link[wmtsa]{wavShrink}}, \cr
 #' \code{EbayesThresh::\link[EbayesThresh]{ebayesthresh.wavelet}} and
 #' \code{wavethresh::\link[wavethresh]{threshold.wd}}
 #'
