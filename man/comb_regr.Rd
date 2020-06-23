@@ -14,9 +14,9 @@ variable in a regression of the type \eqn{y_i = \beta_0 + \beta_1x_{i1} + \beta_
 An object of class \code{lm}.
 }
 \description{
-This function is only a convenient way to estimate a OLS model from a data
+This function is only a convenient way to estimate an OLS model from a data
 frame where the first variable is the dependent one of the model and the
-remaining are the regressors. This functions is used internally
+remaining are the regressors. This function is used internally
 by other functions.
 }
 \examples{

@@ -9,8 +9,8 @@
 \code{wavcoreinf} provides a flexible estimation and
 evaluation of wavelet core inflation from wavelet-based signal
 estimation methods. Functionals are developed to facilitate
-the estimation of several specifications such that it is
-easy to select the best one according to some criterions
+the estimation of several specifications permitting
+the selection of the best one according to some criterions
 established in the core inflation literature.
 }
 \section{Wavelet-based signal estimation}{
@@ -23,20 +23,20 @@ available in three \code{R packages}:
 \item \code{EbayesThresh}
 \item \code{wavethresh}
 }
-The specific methods are explained in the help page of
-functions: \code{wmtsa::\link[wmtsa]{wavShrink}}, \cr
+The specific methods are explained on the help page of
+the functions: \code{wmtsa::\link[wmtsa]{wavShrink}}, \cr
 \code{EbayesThresh::\link[EbayesThresh]{ebayesthresh.wavelet}} and
 \code{wavethresh::\link[wavethresh]{threshold.wd}}
 
-The textbooks of Percival and Walden (2000)
-and Nason (2008) explains in more details these methods.
+The textbooks by Percival and Walden (2000)
+and Nason (2008) explain in more details these methods.
 }
 
 \section{Core inflation}{
 
 
-Some criterions that a good core inflation measure
-should satisfy that are analized in this package are the followings:
+Certain criteria that a good core inflation measure should satisfy
+and which are analyzed in this package include the following:
 
 \itemize{
 \item Standard desviaton

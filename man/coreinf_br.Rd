@@ -41,8 +41,8 @@ food away from home groups.}
 only the underlying items of the services and industrial goods groups.}
 }}
 \source{
-Series can be obtained from function \code{\link{getsgs}} or by codes 433, 11427, 16121,  27838,  27839,  11426,  4466, 16122
-in: \cr
+Series can be obtained from function \code{\link{getsgs}} or by codes: 433, 11427, 16121,  27838,  27839,  11426,  4466, 16122
+in the \cr
 \href{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}{Time Series Management System}
 }
 \usage{
