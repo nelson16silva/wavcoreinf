@@ -2,13 +2,14 @@
 % Please edit documentation in R/dynadj.R
 \name{dyn_adj_est}
 \alias{dyn_adj_est}
-\title{Estimate Models for Dynamic Adjust Analysis}
+\title{Estimate Models for Dynamic Adjustment Analysis}
 \usage{
 dyn_adj_est(y, xreg, h, p, ...)
 }
 \arguments{
-\item{y}{A vector. Headline inflation if the model is the first one described bellow or
-the core inflation measure for the second. The choice depends if interest is in
+\item{y}{A vector. If the user estimates the first regression described
+bellow, \code{y} represents headline inflation or
+core inflation measure if the regression is the second. The choice depends if interest is in
 \eqn{\lambda_h} or in \eqn{\lambda^*_h}.}
 
 \item{xreg}{A vector. Infation or core inflation depending of the \code{y} choice.}
@@ -22,7 +23,7 @@ the core inflation measure for the second. The choice depends if interest is in
 }
 \value{
 A list where each element of it contains the following:
-\item{data}{Tibble with data used in fitting the model.}
+\item{data}{A tibble with the data used in fitting the model.}
 \item{model}{A \code{lm} object.}
 \item{n_obs}{Number of observations of \code{y}.}
 \item{h}{Horizon used in direct estimation.}
@@ -33,7 +34,7 @@ adjustment analysis.
 }
 \details{
 For \eqn{\pi} being the healine inflation and \eqn{\pi^*}
-a core inflation measure, two specifications of regressions can be estimated through this
+a core inflation measure, two specifications of a regression model can be estimated through this
 function:
 \enumerate{
 \item \eqn{\pi_{t + h} - \pi_t =

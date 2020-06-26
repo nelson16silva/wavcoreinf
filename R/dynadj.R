@@ -28,13 +28,13 @@ comb_regr <- function(df) {
   rlang::eval_tidy(lm_call, df)
 }
 
-#' Estimate Models for Dynamic Adjust Analysis
+#' Estimate Models for Dynamic Adjustment Analysis
 #'
 #' Use \code{dyn_adj_est} to estimate several models for dynamic
 #' adjustment analysis.
 #'
 #' @details For \eqn{\pi} being the healine inflation and \eqn{\pi^*}
-#' a core inflation measure, two specifications of regressions can be estimated through this
+#' a core inflation measure, two specifications of a regression model can be estimated through this
 #' function:
 #' \enumerate{
 #' \item \eqn{\pi_{t + h} - \pi_t =
@@ -45,8 +45,9 @@ comb_regr <- function(df) {
 #'  e^*_{t + h}}.
 #'}
 #'
-#' @param y A vector. Headline inflation if the model is the first one described bellow or
-#' the core inflation measure for the second. The choice depends if interest is in
+#' @param y A vector. If the user estimates the first regression described
+#' bellow, \code{y} represents headline inflation or
+#' core inflation measure if the regression is the second. The choice depends if interest is in
 #' \eqn{\lambda_h} or in \eqn{\lambda^*_h}.
 #' @param xreg A vector. Infation or core inflation depending of the \code{y} choice.
 #' @param h An integer. The horizon of prediction.
@@ -55,7 +56,7 @@ comb_regr <- function(df) {
 #' \code{\link{lags}} for specifying if it is recursive or not.
 #'
 #' @return A list where each element of it contains the following:
-#' \item{data}{Tibble with data used in fitting the model.}
+#' \item{data}{A tibble with the data used in fitting the model.}
 #' \item{model}{A \code{lm} object.}
 #' \item{n_obs}{Number of observations of \code{y}.}
 #' \item{h}{Horizon used in direct estimation.}
@@ -131,12 +132,12 @@ dyn_adj_best <- function(models, ic = BIC) {
 #' Extract the Dynamic Adjustment Parameter
 #'
 #' This function is a convenient way of extracting both the dynamic adjustment parameter
-#' and associated p-value of the best model estimated by the
+#' and the associated p-value from the best dynamic model estimated by the
 #' function \code{\link{dyn_adj_best}}.
 #'
 #' @param best_model An object from function \code{\link{dyn_adj_best}}.
 #'
-#' @return A list with two elements: dynamic adjustment parameter and
+#' @return A list of two elements: dynamic adjustment parameter and
 #' p-value.
 #'
 #' @seealso \code{\link{dyn_adj_est}, \link{dyn_adj_best}}
