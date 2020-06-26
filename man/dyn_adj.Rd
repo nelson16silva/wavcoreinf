@@ -21,7 +21,7 @@ dyn_adj(inf, core, H, p, ...)
 A tibble with the dynamic adjustment parameter and p-value for the t test
 of \eqn{\lambda^j_h = 0} for \eqn{j = ( , *)}. Row 1 of
 the tibble is \eqn{h = 1}, row 2 is \eqn{h = 2} and so on. For estimating
-\eqn{\lambda^*_h} put \code{core} as the first argument of the function
+\eqn{\lambda^*_h}, put \code{core} as the first argument of the function
 and headline inflation as the second.
 }
 \description{
@@ -35,7 +35,7 @@ e_{t + h}}, where \eqn{\pi} is the headline inflation and
 \eqn{\pi^*} a measure of core inflation,
 this function gives \eqn{\lambda_h} for \eqn{h \in 1, 2 ..., H}.
 
-In core inflation literature, parameters \eqn{\lambda_h}
+In core inflation's literature, parameters \eqn{\lambda_h}
 and \eqn{\lambda^*_h} of the following regressions are important:
 \itemize{
 \item \eqn{\pi_{t + h} - \pi_t = a_0 + \lambda_h(\pi_t - \pi^*_t) +

@@ -13,7 +13,7 @@ dyn_adj_best(models, ic = BIC)
 }
 \value{
 A list containing the following elements:
-\item{data}{A tibble with data used in fitting the model.}
+\item{data}{A tibble with the data used in fitting the model.}
 \item{model}{An \code{lm} object.}
 \item{n_obs}{Number of observations.}
 \item{h}{Horizon used in direct estimation. See \code{\link{dyn_adj_est}}.}
