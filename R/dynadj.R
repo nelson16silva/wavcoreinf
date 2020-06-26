@@ -106,7 +106,7 @@ dyn_adj_est <- function(y, xreg, h, p, ...) {
 #' @param ic Information criterion BIC or AIC.
 #'
 #' @return A list containing the following elements:
-#' \item{data}{A tibble with data used in fitting the model.}
+#' \item{data}{A tibble with the data used in fitting the model.}
 #' \item{model}{An \code{lm} object.}
 #' \item{n_obs}{Number of observations.}
 #' \item{h}{Horizon used in direct estimation. See \code{\link{dyn_adj_est}}.}
@@ -168,7 +168,7 @@ dyn_adj_pred <- function(best_model) {
 #' \eqn{\pi^*} a measure of core inflation,
 #' this function gives \eqn{\lambda_h} for \eqn{h \in 1, 2 ..., H}.
 #'
-#' In core inflation literature, parameters \eqn{\lambda_h}
+#' In core inflation's literature, parameters \eqn{\lambda_h}
 #' and \eqn{\lambda^*_h} of the following regressions are important:
 #' \itemize{
 #' \item \eqn{\pi_{t + h} - \pi_t = a_0 + \lambda_h(\pi_t - \pi^*_t) +
@@ -188,7 +188,7 @@ dyn_adj_pred <- function(best_model) {
 #' @return A tibble with the dynamic adjustment parameter and p-value for the t test
 #' of \eqn{\lambda^j_h = 0} for \eqn{j = ( , *)}. Row 1 of
 #' the tibble is \eqn{h = 1}, row 2 is \eqn{h = 2} and so on. For estimating
-#' \eqn{\lambda^*_h} put \code{core} as the first argument of the function
+#' \eqn{\lambda^*_h}, put \code{core} as the first argument of the function
 #' and headline inflation as the second.
 #'
 #' @seealso \code{\link{dyn_adj_est}, \link{dyn_adj_best},
