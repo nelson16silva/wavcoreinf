@@ -10,12 +10,12 @@ dyn_adj_pred(best_model)
 \item{best_model}{An object from function \code{\link{dyn_adj_best}}.}
 }
 \value{
-A list with two elements: dynamic adjustment parameter and
+A list of two elements: dynamic adjustment parameter and
 p-value.
 }
 \description{
 This function is a convenient way of extracting both the dynamic adjustment parameter
-and associated p-value of the best model estimated by the
+and the associated p-value from the best dynamic model estimated by the
 function \code{\link{dyn_adj_best}}.
 }
 \examples{

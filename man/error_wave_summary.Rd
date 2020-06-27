@@ -7,7 +7,7 @@
 error_wave_summary(h, ...)
 }
 \arguments{
-\item{h}{An positive integer to set the maximum horizon (\eqn{1, 2, ..., h}).}
+\item{h}{A positive integer that controls which maximum horizon is being used (\eqn{1, 2, ..., h}).}
 
 \item{...}{Additional parameters to pass to the function
 \code{\link{model_error_wave}}.}
@@ -17,7 +17,7 @@ A tibble with the mean of error for all horizon \code{h} considered and
 for all estimated wavelet models.
 }
 \description{
-This function calculates the mean of forecast errors for several horizons.
+This function calculates the average forecast errors over forecasting horizons.
 Those errors are estimated by the function \code{\link{model_error_wave}}.
 }
 \examples{
