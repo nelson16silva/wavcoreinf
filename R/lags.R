@@ -1,8 +1,8 @@
 #' Lag Index Combination
 #'
-#' Generates a data frame with pairs of indexes given the maximum lags
-#' of both \code{p} and \code{q}. This function is useful as an intermediate step for
-#' constructing lag variables to be used in regression models.
+#' Generates a data frame whose rows correspond to indexes showing the initial and final
+#' lag to be used in a regression as finite distributed lag model with two explanatory
+#' variables, for example. This function is useful as an intermediate step for constructing lag variables. See details.
 #'
 #' @param p Integer, maximum lag \code{p}.
 #' @param q Integer, maximum lag \code{q}.
@@ -21,7 +21,7 @@
 #' also grows from one to \code{p} and \code{q}. This last case is
 #' appropriated if one wants to construct variables for
 #' estimating models with more combinations of lags.
-#' The cost of this option is that is time-consuming in
+#' The cost of this option is that it is time-consuming in
 #' terms of computation.
 #'
 #'

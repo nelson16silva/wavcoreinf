@@ -375,12 +375,12 @@ model_error_wave <- function(x, y, h, lags, k, RMSE = TRUE) {
 #' This function calculates the average forecast errors over forecasting horizons.
 #' Those errors are estimated by the function \code{\link{model_error_wave}}.
 #'
-#' @param h A positive integer that controls which maximum horizon is being used (\eqn{1, 2, ..., h}).
+#' @param h A positive integer that controls which maximum horizon is being used in forecasting (\eqn{1, 2, ..., h}).
 #' @param ... Additional parameters to pass to the function
 #' \code{\link{model_error_wave}}.
 #'
-#' @return A tibble with the mean of error for all horizon \code{h} considered and
-#' for all estimated wavelet models.
+#' @return A tibble with the average forecast errors for all horizon \code{h} considered and
+#' for all  wavelet models estimated.
 #'
 #' @seealso \code{\link{model_error_wave}}
 #'

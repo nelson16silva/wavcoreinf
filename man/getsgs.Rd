@@ -7,9 +7,9 @@
 getsgs(namex, numberx)
 }
 \arguments{
-\item{namex}{String vector with the series names.}
+\item{namex}{A vector of strings containing the name of the series.}
 
-\item{numberx}{Integer vector representing the code of the series in SGS database.}
+\item{numberx}{An integer vector representing the code number of the series in SGS database.}
 }
 \value{
 Tibble

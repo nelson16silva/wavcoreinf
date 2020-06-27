@@ -2,8 +2,8 @@
 #'
 #' Extract data from Central Bank of Brazil statistical database \href{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}{Time Series Management System (SGS)}.
 #'
-#' @param namex String vector with the series names.
-#' @param numberx Integer vector representing the code of the series in SGS database.
+#' @param namex A vector of strings containing the names of the series.
+#' @param numberx An integer vector representing the number codes of the series in SGS database.
 #'
 #' @return Tibble
 #'
