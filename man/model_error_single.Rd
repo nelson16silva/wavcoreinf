@@ -17,14 +17,14 @@ headline inflation.}
 
 \item{h}{An integer to set the desired horizon.}
 
-\item{RMSE}{Logical: \code{TRUE} for \code{RMSE} and \code{FALSE} to \code{MAE}.}
+\item{RMSE}{Logical: if \code{TRUE} returns \code{RMSE}, if \code{FALSE} returns \code{MAE}.}
 }
 \value{
 An integer contaning the calculated error.
 }
 \description{
-Calculates root mean square error or mean absolute error for
-a univariate model estimated by the function \code{\link{model_fcast}} and
+Calculates root mean square error or mean absolute error of
+a univariate model estimated by the function \code{\link{model_fcast}} or
 \code{\link{model_est_single}}.
 }
 \examples{

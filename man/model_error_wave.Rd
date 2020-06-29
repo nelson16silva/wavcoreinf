@@ -18,14 +18,14 @@ Headline inflation for estimation of a wavelet core inflation measure.}
 
 \item{k}{An integer to determine the number of observations to include in the out-of-sample set.}
 
-\item{RMSE}{logical: \code{TRUE} for \code{RMSE} and \code{FALSE} to \code{MAE}.}
+\item{RMSE}{logical: if \code{TRUE} returns \code{RMSE}, if \code{FALSE} returns \code{MAE}.}
 }
 \value{
 A vector with error of every wavelet model considered.
 }
 \description{
-\code{model_error_wave} estimates the prediction error for a model
-fitted by the function \code{\link{model_est}} where the \code{x} variable
+\code{model_error_wave} estimates the prediction error in a model
+fitted by the function \code{\link{model_est}} when the \code{x} variable
 is a wavelet-based signal estimation of \code{y}.
 For each new observation \code{k} included in the
 out-of-sample set, the wavelet-based signal is reestimated.

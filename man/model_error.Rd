@@ -20,7 +20,7 @@ of core inflation that is never revised.}
 
 \item{h}{An integer to set the desired horizon.}
 
-\item{RMSE}{Logical: \code{TRUE} for \code{RMSE} and \code{FALSE} to \code{MAE}.}
+\item{RMSE}{Logical: if \code{TRUE} returns \code{RMSE}, if \code{FALSE} returns \code{MAE}.}
 }
 \value{
 An integer contaning the calculated error.
@@ -28,8 +28,8 @@ An integer contaning the calculated error.
 \description{
 This function calculates root mean square error or mean absolute error for
 a model estimated by the function \code{\link{model_fcast}}. This function
-is appropriate for forecasting evaluation of
-core inflation measures that are never revised.
+is appropriate for forecasting evaluation of a
+core inflation measure that is never revised.
 }
 \examples{
 inf_head <- coreinf_br[["ipca"]]

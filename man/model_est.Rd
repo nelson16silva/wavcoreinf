@@ -19,11 +19,11 @@ model_est(y, xreg, h, lags)
 A list with following components:
 \item{model}{A \code{lm} object.}
 \item{n_obs}{Number of observations of \code{y}.}
-\item{h}{The horizon over which y is to be forecast.}
+\item{h}{The horizon from which y is being forecasted.}
 }
 \description{
 Given \code{y} and \code{xreg}, this function estimates direct models as
-described bellow in the details section.
+described below, in section "Details".
 }
 \details{
 Condiser the following regression:
@@ -48,9 +48,9 @@ equivalent to estimate the previous equation for headline inflation.
 If \code{recursive = TRUE},
 \eqn{i} is not necessarily initiated in 1, i.e, \code{p_start}
 and \code{q_start}  also changes in
-the first equation. Allowing for \code{p_start} and \code{q_start} to vary
-implies more models estimated because it opens up
-more possibilities.
+the first equation. Allowing \code{p_start} and \code{q_start} to vary,
+there are more models to be estimated because it opens up
+a lot of new possibilities.
 }
 \examples{
 inf_head <- coreinf_br[["ipca"]]

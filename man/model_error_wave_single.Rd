@@ -16,7 +16,7 @@ Headline inflation for estimation of a wavelet core inflation measure.}
 
 \item{h}{An integer to set the desired horizon.}
 
-\item{RMSE}{logical: \code{TRUE} for \code{RMSE} and \code{FALSE} to \code{MAE}.}
+\item{RMSE}{logical: if \code{TRUE} returns \code{RMSE}, if \code{FALSE} returns \code{MAE}.}
 
 \item{...}{Additional parameters to pass to function \code{\link{smooth_wavelet}}.}
 }
@@ -25,8 +25,8 @@ A numeric vector of length one.
 }
 \description{
 \code{model_error_wave_single} estimates the prediction
-error for the model fitted by the
-function \code{\link{model_est}} where the \code{x} variable is
+error in a model fitted by the
+function \code{\link{model_est}} when the \code{x} variable is
 \code{y} smoothed by wavelet models. For each new observation
 \code{k} inlucluded in the out-of-sample set,
 the wavelet-based signal is reestimated.
