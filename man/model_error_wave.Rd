@@ -21,7 +21,7 @@ Headline inflation for estimation of a wavelet core inflation measure.}
 \item{RMSE}{logical: if \code{TRUE} returns \code{RMSE}, if \code{FALSE} returns \code{MAE}.}
 }
 \value{
-A vector with error of every wavelet model considered.
+A vector of errors for every wavelet model considered.
 }
 \description{
 \code{model_error_wave} estimates the prediction error in a model

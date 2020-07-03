@@ -1,6 +1,6 @@
 #' Estimate OLS from Data Frame
 #'
-#' This function is only a convenient way to estimate an OLS model from a data
+#' This function is just a convenient way to estimate an OLS model from a data
 #' frame where the first variable is the dependent one of the model and the
 #' remaining are the regressors. This function is used internally
 #' by other functions.
@@ -46,7 +46,7 @@ comb_regr <- function(df) {
 #'}
 #'
 #' @param y A vector. If the user estimates the first regression described
-#' bellow, \code{y} represents headline inflation or
+#' below, \code{y} represents headline inflation or
 #' core inflation measure if the regression is the second. The choice depends if interest is in
 #' \eqn{\lambda_h} or in \eqn{\lambda^*_h}.
 #' @param xreg A vector. Infation or core inflation depending of the \code{y} choice.

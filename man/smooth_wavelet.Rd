@@ -30,7 +30,7 @@ If \code{thfun = \link[wmtsa]{wavShrink}}, \code{wtfun = NULL} (default).}
 \item{wtfunlist}{A named list of parameters to pass to functions \code{\link[waveslim]{dwt}},
 \code{\link[waveslim]{modwt}} or \code{\link[wavethresh]{wd}}.}
 
-\item{...}{Additional arguments to pass for functions:
+\item{...}{Additional arguments to pass to functions:
 \itemize{
 \item{}{\code{wmtsa::\link[wmtsa]{wavShrink}}}
 \item{}{\code{EbayesThresh::\link[EbayesThresh]{ebayesthresh.wavelet}}}

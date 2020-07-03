@@ -1,6 +1,6 @@
 #' Extract Data from SGS Database
 #'
-#' Extract data from Central Bank of Brazil statistical database \href{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}{Time Series Management System (SGS)}.
+#' Extracts data from Central Bank of Brazil statistical database \href{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}{Time Series Management System (SGS)}.
 #'
 #' @param namex A vector of strings containing names  of series chosen by user.
 #' @param numberx An integer vector representing the number of each series in SGS database.
@@ -16,7 +16,6 @@
 #' # 11427 ex0 (core inflation)
 #' n <- c(433, 11427)
 #' x <- c("ipca", "ex0")
-#' # Sys.setenv(no_proxy = "bcb.gov.br") # configuration for internal bcb connection
 #' inf <- getsgs(x, n)
 #' }
 getsgs <- function(namex, numberx) {

@@ -7,9 +7,9 @@
 #' \item \eqn{\pi_{it} = a + b\pi^*_{it} + e_{it}},
 #' } and
 #' gives statistics for \eqn{a, b, \overline{R}^2} and F-test \eqn{H0:
-#' a = 0, b = 1}. \code{no_bias} is useful to test
-#' with the bias in a core inflation measure (\eqn{\pi^*}) is
-#' not significant.
+#' a = 0, b = 1}. \code{no_bias} is useful to find out
+#' whether or not the bias in a core inflation measure (\eqn{\pi^*}) is
+#' significant.
 #'
 #' @param y A numeric vector or \code{ts} (inflation, \eqn{\pi})
 #' @param x A numeric vector or \code{ts }(core inflation, \eqn{\pi^*})
@@ -36,8 +36,8 @@ no_bias <- function(y, x) {
 
 #' Bias p-value
 #'
-#' Extracts p-value for the model estimated by the function
-#' \code{\link{no_bias}}. If the mean of \code{y} is equal of the \code{x}, p-value is
+#' Extracts p-value from the model estimated by the function
+#' \code{\link{no_bias}}. If the mean of \code{y} is equal of  \code{x}, p-value is
 #' expected to be higher than 0.05. In this circuntance, bias of
 #' the core inflation measure is not significant. See \code{\link{no_bias}}
 #' for more information.

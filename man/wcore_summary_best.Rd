@@ -20,22 +20,22 @@ specification have the same statistics, all these models are presented
 in the tibble.
 }
 \description{
-\code{wcore_summary_best} choices wavelet models that are the most
-favorables in terms of statistics calculated by the function
+\code{wcore_summary_best} chooses the wavelet models that are the most
+favorable ones in terms of statistics calculated by the function
 \code{\link{wcore_summary_fcast}}.
 }
 \details{
-Variable criterions that are in input \code{x}
-are normalizad to be in the interval [0, 1]. Given \code{d},
+Criteria variables that are in input \code{x}
+are normalized to the interval [0, 1]. Given \code{d},
 the function \code{wcore_summary_best} returns the model in which the sum
-of criterions is minimal. When criterium is p-value, as in
+of criteria is minimal. When the criterion is p-value, as in
 \link[=no_bias2]{no bias}, the normalization is (1 - "p-value").
 
 The motivation for this function is that a good core inflation
 should possess desirable statistical features. Some of them are
 captured in \code{wcore_summary_best}. A good core inflation
-should have low standard desviation, capture trend inflation
-(moving avarage), not be biased,  have dynamic consistency, and should helps to predict headline
+should have low standard deviation, capture trend inflation
+(moving avarage), not be biased,  have dynamic consistency, and should help to predict headline
 inflation.
 }
 \examples{

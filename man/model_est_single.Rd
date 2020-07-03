@@ -2,27 +2,27 @@
 % Please edit documentation in R/forecastOOP.R
 \name{model_est_single}
 \alias{model_est_single}
-\title{Direct Autoregression Model}
+\title{Direct Autoregressive Forecast Model}
 \usage{
 model_est_single(y, h, lags)
 }
 \arguments{
 \item{y}{A vector or a time series.}
 
-\item{h}{An integer, the horizon over which \code{y} is to be forecast.}
+\item{h}{An integer, the horizon from which \code{y} is being forecasted.}
 
 \item{lags}{A data frame with lags to begin and to stop. These
 lags can be indirectly obtaneid by the function \code{lags} as example
-bellow shows.}
+below shows.}
 }
 \value{
-A list with following components:
+A list of the following components:
 \item{model}{A lm object.}
 \item{n_obs}{Number of observations.}
 \item{h}{The horizon.}
 }
 \description{
-Estimates a direct autoregression model.
+Estimates a direct autoregressive forecast model.
 }
 \details{
 Condiser the following regression:
@@ -33,7 +33,7 @@ Condiser the following regression:
 data frame \code{lags} (\code{p_start} \eqn{\ge 1}).
 
 Details section for the function \code{\link{model_est}} provides
-more information. Forecasting obtainded by the direct autoregression model
+more information. Forecasting obtainded by the direct autoregressive model
 can be compared with forecasting where lags of the core inflation
 measure are considered in the model as in \code{\link{model_est}} function.
 }

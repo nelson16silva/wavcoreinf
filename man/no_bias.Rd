@@ -22,9 +22,9 @@ in \code{x} (core inflation, \eqn{\pi^*}),
 \item \eqn{\pi_{it} = a + b\pi^*_{it} + e_{it}},
 } and
 gives statistics for \eqn{a, b, \overline{R}^2} and F-test \eqn{H0:
-a = 0, b = 1}. \code{no_bias} is useful to test
-with the bias in a core inflation measure (\eqn{\pi^*}) is
-not significant.
+a = 0, b = 1}. \code{no_bias} is useful to find out
+whether or not the bias in a core inflation measure (\eqn{\pi^*}) is
+significant.
 }
 \examples{
 inf_head <- coreinf_br[["ipca"]]

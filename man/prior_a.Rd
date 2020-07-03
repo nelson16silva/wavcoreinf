@@ -2,7 +2,7 @@
 % Please edit documentation in R/priors.R
 \name{prior_a}
 \alias{prior_a}
-\title{Determine Scale Factor Paramenter "a" for Laplace Distribution}
+\title{Determine Scale Factor Parameter "a" for Laplace Distribution}
 \usage{
 prior_a(x, h, k, lags, interval = c(0.1, 5), tol = 0.01,
   wtfun = "dwt", wtfunlist = list(), ...)
@@ -35,7 +35,7 @@ The function \code{prior_a} determines the parameter
 \code{a} of the laplace distribution that is used in
 \link[=ebayesthresh.wavelet]{empirical
 Bayes thresholding approach}. Estimation  is based on
-minimization of the avarage of the forecast error.
+minimizing the avarage of forecast error.
 }
 \examples{
 pq <- lags(2, 1)

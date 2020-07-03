@@ -26,7 +26,7 @@ of core inflation that is never revised.}
 An integer contaning the calculated error.
 }
 \description{
-This function calculates root mean square error or mean absolute error for
+This function calculates the root mean square error or mean absolute error for
 a model estimated by the function \code{\link{model_fcast}}. This function
 is appropriate for forecasting evaluation of a
 core inflation measure that is never revised.

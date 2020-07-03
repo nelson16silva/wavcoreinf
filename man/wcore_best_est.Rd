@@ -17,7 +17,7 @@ compute wavelet-based signal estimation that must be
 presenting  in the object \code{x}.}
 }
 \value{
-A tibble. The fist column is the groupping variable. Other
+A tibble. The fist column is the groupping variable. The other
 columns are:
 \describe{
 \item{mean2}{Mean of the wavelet core inflation.}

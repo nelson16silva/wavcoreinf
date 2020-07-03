@@ -15,8 +15,8 @@ no_bias2(y, x)
 A numeric vector of length one.
 }
 \description{
-Extracts p-value for the model estimated by the function
-\code{\link{no_bias}}. If the mean of \code{y} is equal of the \code{x}, p-value is
+Extracts p-value from the model estimated by the function
+\code{\link{no_bias}}. If the mean of \code{y} is equal of  \code{x}, p-value is
 expected to be higher than 0.05. In this circuntance, bias of
 the core inflation measure is not significant. See \code{\link{no_bias}}
 for more information.

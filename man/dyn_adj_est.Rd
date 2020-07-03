@@ -8,7 +8,7 @@ dyn_adj_est(y, xreg, h, p, ...)
 }
 \arguments{
 \item{y}{A vector. If the user estimates the first regression described
-bellow, \code{y} represents headline inflation or
+below, \code{y} represents headline inflation or
 core inflation measure if the regression is the second. The choice depends if interest is in
 \eqn{\lambda_h} or in \eqn{\lambda^*_h}.}
 

@@ -22,7 +22,7 @@ another data frame. The number of rows of both data
 frames must be equal.
 }
 \examples{
-# Measuring how long wavelet core inflation measures are
+# Measuring how far wavelet core inflation measures are
 # from moving averages of headline inflation.
 
 inf_head <- coreinf_br[["ipca"]]

@@ -26,13 +26,13 @@ wavelet core inflation measure.}
  \item{alpha, val_p, alpha1 and val_p1}{Coefficients
  \eqn{\lambda_h} and \eqn{\lambda^*_h} and respective
  p-value from function \code{\link{dyn_adj}}, where
- \code{H, p = 1}.}
+ \code{H = 1 and p = 1}.}
 }
 }
 \description{
 This function calculates statistics that summarize the quality of
-an estimated wavelet core inflation measure, excluding forecasting
-criterium.
+an estimated wavelet-based core inflation measure, excluding the forecasting
+criterion.
 }
 \examples{
 library(lubridate)

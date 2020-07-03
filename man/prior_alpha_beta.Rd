@@ -25,21 +25,21 @@ in the out-of-sample set.}
 
 \item{control}{A list of control parameters. See \code{stats::\link[stats]{optim}}.}
 
-\item{wtfunlist}{A named list of parameters to pass to functions \code{wavethresh::\link[wavethresh]{wd}}.}
+\item{wtfunlist}{A named list of parameters to pass to function \code{wavethresh::\link[wavethresh]{wd}}.}
 
 \item{...}{Additional parameters to pass to function \code{\link{smooth_wavelet}}.
-Do not pass the argument \code{policy} used in
-\code{wavethresh::\link[wavethresh]{threshold.wd}} function.}
+Do not pass the argument \code{policy} used in function
+\code{wavethresh::\link[wavethresh]{threshold.wd}}.}
 }
 \value{
-A numeric vector of length one.
+A numeric vector of length two.
 }
 \description{
 The function \code{prior_alpha_beta} determines both the parameters
 \code{alpha} and \code{beta} that are used
 in  \link[=BAYES.THR]{bayesian wavelet thresholding
 of noisy data}. Estimation  is based on
-minimization of the avarage of the forecast error.
+minimizing the avarage of forecast error.
 }
 \examples{
 
@@ -66,7 +66,7 @@ family = c("DaubExPhase"),
 type = c("wavelet", "station")
 )
 
-# Obs.: inicial alpha and beta must be included such
+# Note: initial alpha and beta must be included such
 # that the appropriate structure of wthr_args is maitained
 # after the inclusion of estimated priors
 

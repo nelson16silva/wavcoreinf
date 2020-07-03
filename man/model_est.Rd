@@ -2,7 +2,7 @@
 % Please edit documentation in R/forecastOOP.R
 \name{model_est}
 \alias{model_est}
-\title{Estimate Direct Model}
+\title{Estimate Direct Forecasting Model}
 \usage{
 model_est(y, xreg, h, lags)
 }
@@ -22,7 +22,7 @@ A list with following components:
 \item{h}{The horizon from which y is being forecasted.}
 }
 \description{
-Given \code{y} and \code{xreg}, this function estimates direct models as
+Given \code{y} and \code{xreg}, this function estimates a direct forecasting model as
 described below, in section "Details".
 }
 \details{

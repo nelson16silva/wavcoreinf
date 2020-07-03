@@ -1,6 +1,6 @@
 #' Centered Moving Avarage
 #'
-#' \code{mavc} calculates \code{k}-period centered moving avarage of a vector or time series.
+#' \code{mavc} calculates the \code{k}-period centered moving avarage of a vector or time series.
 #' When \code{k} is even the series length is increased by one and the two
 #' endpoints are weighted by 0.5.
 #'

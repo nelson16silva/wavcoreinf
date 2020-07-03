@@ -4,7 +4,7 @@
 #' evaluation of wavelet core inflation from wavelet-based signal
 #' estimation methods. Functionals are developed to facilitate
 #' the estimation of several specifications permitting
-#' the selection of the best one according to some criterions
+#' the selection of the best one according to specific criteria
 #' established in the core inflation literature.
 #'
 #' @section Wavelet-based signal estimation:

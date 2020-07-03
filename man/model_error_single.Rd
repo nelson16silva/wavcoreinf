@@ -23,7 +23,7 @@ headline inflation.}
 An integer contaning the calculated error.
 }
 \description{
-Calculates root mean square error or mean absolute error of
+Calculates the root mean square error or mean absolute error of
 a univariate model estimated by the function \code{\link{model_fcast}} or
 \code{\link{model_est_single}}.
 }

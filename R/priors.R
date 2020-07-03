@@ -1,10 +1,10 @@
-#' Determine Scale Factor Paramenter "a" for Laplace Distribution
+#' Determine Scale Factor Parameter "a" for Laplace Distribution
 #'
 #' The function \code{prior_a} determines the parameter
 #' \code{a} of the laplace distribution that is used in
 #' \link[=ebayesthresh.wavelet]{empirical
 #' Bayes thresholding approach}. Estimation  is based on
-#' minimization of the avarage of the forecast error.
+#' minimizing the avarage of forecast error.
 #'
 #'
 #' @param interval A vector containing the end-points of the interval to be searched for the minimum. See: \code{stats::\link[stats]{optimize}}.
@@ -54,7 +54,7 @@ prior_a <- function(x, h, k, lags, interval = c(0.1, 5), tol = 0.01, wtfun = "dw
 #' \code{alpha} and \code{beta} that are used
 #' in  \link[=BAYES.THR]{bayesian wavelet thresholding
 #' of noisy data}. Estimation  is based on
-#' minimization of the avarage of the forecast error.
+#' minimizing the avarage of forecast error.
 #'
 #'
 #' @inheritParams prior_a
@@ -62,12 +62,12 @@ prior_a <- function(x, h, k, lags, interval = c(0.1, 5), tol = 0.01, wtfun = "dw
 #' @param lower Bounds on the variables for the "L-BFGS-B" method. See \code{stats::\link[stats]{optim}}.
 #' @param upper Bounds on the variables for the "L-BFGS-B" method. See  \code{stats::\link[stats]{optim}}.
 #' @param control A list of control parameters. See \code{stats::\link[stats]{optim}}.
-#' @param wtfunlist A named list of parameters to pass to functions \code{wavethresh::\link[wavethresh]{wd}}.
+#' @param wtfunlist A named list of parameters to pass to function \code{wavethresh::\link[wavethresh]{wd}}.
 #' @param ... Additional parameters to pass to function \code{\link{smooth_wavelet}}.
-#' Do not pass the argument \code{policy} used in
-#' \code{wavethresh::\link[wavethresh]{threshold.wd}} function.
+#' Do not pass the argument \code{policy} used in function
+#' \code{wavethresh::\link[wavethresh]{threshold.wd}}.
 #'
-#' @return A numeric vector of length one.
+#' @return A numeric vector of length two.
 #' @export
 #'
 #' @examples
@@ -95,7 +95,7 @@ prior_a <- function(x, h, k, lags, interval = c(0.1, 5), tol = 0.01, wtfun = "dw
 #' type = c("wavelet", "station")
 #' )
 #'
-#' # Obs.: inicial alpha and beta must be included such
+#' # Note: initial alpha and beta must be included such
 #' # that the appropriate structure of wthr_args is maitained
 #' # after the inclusion of estimated priors
 #'
