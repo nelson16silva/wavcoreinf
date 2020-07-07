@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Wavelet Core Inflation"
+title: "Introduction to Wavelet-based Core Inflation Using wavcoreinf"
 author: "Nelson Silva"
 date: "`r Sys.Date()`"
 output: 
@@ -32,7 +32,7 @@ library(forecast)
 library(ellipsis)
 ```
 
-The main goal of this vignette is to construct an example showing how a wavelet core inflation measure can be obtained by wavcoreinf package. Then, this wavelet core is compared with others tranditional core inflation measures. The data are the same as in the database coreinf_br. This database contains headline inflation and core inflation measure for the Brazilian economy. The example is based on empirical Bayes thresholding on the levels of a wavelet transform methdod available in R package EbayesThresh. Measures based on others methods can be constructed in the same way.
+The main goal of this vignette is to construct an example showing how a wavelet-based core inflation measure can be obtained from the  wavcoreinf package. Then, this wavelet-based  core inflation measure is compared with other tranditional measures. Data is the same as in the database coreinf_br. This database contains the headline inflation and core inflation measures of the Brazilian economy. The example is based on empirical Bayes thresholding on the levels of a wavelet transform method that is  available in the R package EbayesThresh. Measures based on other methods can be constructed in the same way.
 
 ## Data: Brazilian Headline Inflation and Core Inflation
 
@@ -55,7 +55,8 @@ x <- c("ipca", "ipcams", "ipcama", "ipcaex0", "ipcaex1", "ipcadp", "ipcaex2", "i
 # inf <- getsgs(x, n)
 ```
 
-Creating individual time series from 2006-07-01
+Creating individual time series from 2006-07-01 
+to 2019-08-01
 
 ```{r}
 coreinf_br2 <- filter(coreinf_br, date >= "2006-07-01")
@@ -119,7 +120,7 @@ ebthr_smooth <- wav_smooth(ipca, ebthr_args)
 ebthr_table <- wcore_table(ebthr_smooth, ipca)
 ```
 
-Statistics for Evaluation of the wavelet core inflation, h = 3 and k = 15 just for fasting computation. More realistic h and k would be 12 and 24, respectively.
+Statistics for Evaluation of the wavelet core inflation, h = 3 and k = 15 only for faster computation. More realistic h and k could be 12 and 24, respectively.
 
 ```{r message=FALSE, warning=FALSE}
 ebthr_error_mean <- error_wave_summary(3, x = ebthr_args, y = ipca, lags = pq, k = 15, RMSE = TRUE)
@@ -150,7 +151,7 @@ bayes2_ts <- ts(ebthr_best_median, start = ts_start, freq = 12)
 
 ## Analysis
 
-Tibble with headline inflation, tradional and wavelet core inflation
+Tibble with headline inflation, traditional and wavelet core inflation
 
 ```{r}
 inf <- tibble(
@@ -182,6 +183,8 @@ inf %>%
   scale_linetype_manual(values = c(Core = "solid", Headline = "dashed"))   
 
 ```
+
+Descriptive statistics for core inflation measures
 
 ```{r}
 inf %>%

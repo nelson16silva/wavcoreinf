@@ -8,9 +8,9 @@
 <!-- badges: end -->
 
 wavcoreinf provides a flexible estimation and evaluation of wavelet core
-inflation from wavelet-based signal estimation methods. Functionals are
-developed to facilitate the estimation of several specifications such
-that it is easy to select the best one according to some criterions
+inflation from waveletbased signal estimation methods. Functionals are
+developed to facilitate the estimation of several specifications
+permitting the selection of the best one according to specific criteria
 established in the core inflation literature.
 
 ## Installation
@@ -25,8 +25,8 @@ devtools::install_github("nelson16silva/wavcoreinf")
 
 ## Example
 
-This is a basic example which shows you how to obtain a good wavelet
-core inflation measure:
+This is a basic example which shows you how to obtain a good core
+inflation measure from wavelet:
 
 ``` r
 library(wavcoreinf)
