@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Choose Best Wavelet Model — wcore_summary_best" />
 
-<meta property="og:description" content="wcore_summary_best choices wavelet models that are the most
-favorables in terms of statistics calculated by the function
+<meta property="og:description" content="wcore_summary_best chooses the wavelet models that are the most
+favorable ones in terms of statistics calculated by the function
 wcore_summary_fcast." />
 <meta name="twitter:card" content="summary" />
 
@@ -110,8 +110,8 @@ wcore_summary_fcast." />
 
     <div class="ref-description">
     
-    <p><code>wcore_summary_best</code> choices wavelet models that are the most
-favorables in terms of statistics calculated by the function
+    <p><code>wcore_summary_best</code> chooses the wavelet models that are the most
+favorable ones in terms of statistics calculated by the function
 <code><a href='wcore_summary_fcast.html'>wcore_summary_fcast</a></code>.</p>
     
     </div>
@@ -142,16 +142,16 @@ in the tibble.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Variable criterions that are in input <code>x</code>
-are normalizad to be in the interval [0, 1]. Given <code>d</code>,
+    <p>Criteria variables that are in input <code>x</code>
+are normalized to the interval [0, 1]. Given <code>d</code>,
 the function <code>wcore_summary_best</code> returns the model in which the sum
-of criterions is minimal. When criterium is p-value, as in
+of criteria is minimal. When the criterion is p-value, as in
 <a href='no_bias2.html'>no bias</a>, the normalization is (1 - "p-value").</p>
 <p>The motivation for this function is that a good core inflation
 should possess desirable statistical features. Some of them are
 captured in <code>wcore_summary_best</code>. A good core inflation
-should have low standard desviation, capture trend inflation
-(moving avarage), not be biased,  have dynamic consistency, and should helps to predict headline
+should have low standard deviation, capture trend inflation
+(moving avarage), not be biased,  have dynamic consistency, and should help to predict headline
 inflation.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -195,8 +195,8 @@ issue Sum, pages 289-313.</p>
 <span class='fu'>wcore_summary_best</span>(<span class='no'>wavcore_smry</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 13
 #&gt;   wavelet n.level x_sm  date  error    sd mav25 no_bias  alpha    val_p alpha1
 #&gt;   &lt;chr&gt;     &lt;int&gt; &lt;lis&gt; &lt;lis&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
-#&gt; 1 haar          4 &lt;dbl… &lt;dbl… 0.271 0.559 0.348   0.140 -0.792 2.27e-19 0.0457
-#&gt; # … with 2 more variables: val_p1 &lt;dbl&gt;, crit &lt;dbl&gt;</div></pre>
+#&gt; 1 haar          4 &lt;dbl~ &lt;dbl~ 0.271 0.559 0.348   0.140 -0.792 2.27e-19 0.0457
+#&gt; # ... with 2 more variables: val_p1 &lt;dbl&gt;, crit &lt;dbl&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

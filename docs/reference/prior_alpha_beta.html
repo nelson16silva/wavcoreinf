@@ -38,7 +38,7 @@
 alpha and beta that are used
 in  bayesian wavelet thresholding
 of noisy data. Estimation  is based on
-minimization of the avarage of the forecast error." />
+minimizing the avarage of forecast error." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -116,7 +116,7 @@ minimization of the avarage of the forecast error." />
 <code>alpha</code> and <code>beta</code> that are used
 in  <a href='BAYES.THR.html'>bayesian wavelet thresholding
 of noisy data</a>. Estimation  is based on
-minimization of the avarage of the forecast error.</p>
+minimizing the avarage of forecast error.</p>
     
     </div>
 
@@ -161,19 +161,19 @@ in the out-of-sample set.</p></td>
     </tr>
     <tr>
       <th>wtfunlist</th>
-      <td><p>A named list of parameters to pass to functions <code>wavethresh::<a href='https://rdrr.io/pkg/wavethresh/man/wd.html'>wd</a></code>.</p></td>
+      <td><p>A named list of parameters to pass to function <code>wavethresh::<a href='https://rdrr.io/pkg/wavethresh/man/wd.html'>wd</a></code>.</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>Additional parameters to pass to function <code><a href='smooth_wavelet.html'>smooth_wavelet</a></code>.
-Do not pass the argument <code>policy</code> used in
-<code>wavethresh::<a href='https://rdrr.io/pkg/wavethresh/man/threshold.wd.html'>threshold.wd</a></code> function.</p></td>
+Do not pass the argument <code>policy</code> used in function
+<code>wavethresh::<a href='https://rdrr.io/pkg/wavethresh/man/threshold.wd.html'>threshold.wd</a></code>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A numeric vector of length one.</p>
+    <p>A numeric vector of length two.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -200,7 +200,7 @@ Do not pass the argument <code>policy</code> used in
 <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"wavelet"</span>, <span class='st'>"station"</span>)
 )
 
-<span class='co'># Obs.: inicial alpha and beta must be included such</span>
+<span class='co'># Note: initial alpha and beta must be included such</span>
 <span class='co'># that the appropriate structure of wthr_args is maitained</span>
 <span class='co'># after the inclusion of estimated priors</span>
 

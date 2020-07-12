@@ -34,7 +34,7 @@
 
 <meta property="og:title" content="Extract Data from SGS Database — getsgs" />
 
-<meta property="og:description" content="Extract data from Central Bank of Brazil statistical database Time Series Management System (SGS)." />
+<meta property="og:description" content="Extracts data from Central Bank of Brazil statistical database Time Series Management System (SGS)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,7 +108,7 @@
 
     <div class="ref-description">
     
-    <p>Extract data from Central Bank of Brazil statistical database <a href='https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries'>Time Series Management System (SGS)</a>.</p>
+    <p>Extracts data from Central Bank of Brazil statistical database <a href='https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries'>Time Series Management System (SGS)</a>.</p>
     
     </div>
 
@@ -119,11 +119,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>namex</th>
-      <td><p>String vector with the series names.</p></td>
+      <td><p>A vector of strings containing names  of series chosen by user.</p></td>
     </tr>
     <tr>
       <th>numberx</th>
-      <td><p>Integer vector representing the code of the series in SGS database.</p></td>
+      <td><p>An integer vector representing the number of each series in SGS database.</p></td>
     </tr>
     </table>
     
@@ -138,7 +138,6 @@
 <span class='co'># 11427 ex0 (core inflation)</span>
 <span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>433</span>, <span class='fl'>11427</span>)
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"ipca"</span>, <span class='st'>"ex0"</span>)
-<span class='co'># Sys.setenv(no_proxy = "bcb.gov.br") # configuration for internal bcb connection</span>
 <span class='no'>inf</span> <span class='kw'>&lt;-</span> <span class='fu'>getsgs</span>(<span class='no'>x</span>, <span class='no'>n</span>)
 }</div></pre>
   </div>

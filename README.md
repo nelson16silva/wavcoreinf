@@ -7,8 +7,8 @@
 
 <!-- badges: end -->
 
-wavcoreinf provides a flexible estimation and evaluation of wavelet core
-inflation from waveletbased signal estimation methods. Functionals are
+wavcoreinf provides a flexible estimation and evaluation of core
+inflation from wavelet-based signal estimation methods. Functionals are
 developed to facilitate the estimation of several specifications
 permitting the selection of the best one according to specific criteria
 established in the core inflation literature.
@@ -49,7 +49,7 @@ x <- c("ipca", "ipcams", "ipcama", "ipcaex0", "ipcaex1", "ipcadp", "ipcaex2", "i
 # inf <- getsgs(x, n)
 ```
 
-### Creating individual time series from 2006-07-01
+### Creating individual time series from 2006-07-01 to 2019-08-01
 
 ``` r
 coreinf_br2 <- filter(coreinf_br, date >= "2006-07-01")

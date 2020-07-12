@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estimate Direct Model — model_est • wavcoreinf</title>
+<title>Estimate Direct Forecasting Model — model_est • wavcoreinf</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,10 +32,10 @@
 
 
 
-<meta property="og:title" content="Estimate Direct Model — model_est" />
+<meta property="og:title" content="Estimate Direct Forecasting Model — model_est" />
 
-<meta property="og:description" content="Given y and xreg, this function estimates direct models as
-described bellow in the details section." />
+<meta property="og:description" content="Given y and xreg, this function estimates a direct forecasting model as
+described below, in section &quot;Details&quot;." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,15 +102,15 @@ described bellow in the details section." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Estimate Direct Model</h1>
+    <h1>Estimate Direct Forecasting Model</h1>
     
     <div class="hidden name"><code>model_est.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Given <code>y</code> and <code>xreg</code>, this function estimates direct models as
-described bellow in the details section.</p>
+    <p>Given <code>y</code> and <code>xreg</code>, this function estimates a direct forecasting model as
+described below, in section "Details".</p>
     
     </div>
 
@@ -142,7 +142,7 @@ described bellow in the details section.</p>
     <p>A list with following components:</p>
 <dt>model</dt><dd><p>A <code>lm</code> object.</p></dd>
 <dt>n_obs</dt><dd><p>Number of observations of <code>y</code>.</p></dd>
-<dt>h</dt><dd><p>The horizon over which y is to be forecast.</p></dd>
+<dt>h</dt><dd><p>The horizon from which y is being forecasted.</p></dd>
 
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
@@ -164,9 +164,9 @@ equivalent to estimate the previous equation for headline inflation.
 If <code>recursive = TRUE</code>,
 \(i\) is not necessarily initiated in 1, i.e, <code>p_start</code>
 and <code>q_start</code>  also changes in
-the first equation. Allowing for <code>p_start</code> and <code>q_start</code> to vary
-implies more models estimated because it opens up
-more possibilities.</p>
+the first equation. Allowing <code>p_start</code> and <code>q_start</code> to vary,
+there are more models to be estimated because it opens up
+a lot of new possibilities.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -192,7 +192,7 @@ more possibilities.</p>
 #&gt;  8     1.02          1.71              NA
 #&gt;  9     1.55          1.7               NA
 #&gt; 10     2.43          1.02              NA
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[1]]$model
 #&gt; 
@@ -226,7 +226,7 @@ more possibilities.</p>
 #&gt;  8     1.02          1.71          2.81              NA
 #&gt;  9     1.55          1.7           1.71              NA
 #&gt; 10     2.43          1.02          1.7               NA
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[2]]$model
 #&gt; 

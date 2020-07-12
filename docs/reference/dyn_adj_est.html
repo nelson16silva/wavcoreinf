@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estimate Models for Dynamic Adjust Analysis — dyn_adj_est • wavcoreinf</title>
+<title>Estimate Models for Dynamic Adjustment Analysis — dyn_adj_est • wavcoreinf</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
 
 
 
-<meta property="og:title" content="Estimate Models for Dynamic Adjust Analysis — dyn_adj_est" />
+<meta property="og:title" content="Estimate Models for Dynamic Adjustment Analysis — dyn_adj_est" />
 
 <meta property="og:description" content="Use dyn_adj_est to estimate several models for dynamic
 adjustment analysis." />
@@ -102,7 +102,7 @@ adjustment analysis." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Estimate Models for Dynamic Adjust Analysis</h1>
+    <h1>Estimate Models for Dynamic Adjustment Analysis</h1>
     
     <div class="hidden name"><code>dyn_adj_est.Rd</code></div>
     </div>
@@ -121,8 +121,9 @@ adjustment analysis.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>y</th>
-      <td><p>A vector. Headline inflation if the model is the first one described bellow or
-the core inflation measure for the second. The choice depends if interest is in
+      <td><p>A vector. If the user estimates the first regression described
+below, <code>y</code> represents headline inflation or
+core inflation measure if the regression is the second. The choice depends if interest is in
 \(\lambda_h\) or in \(\lambda^*_h\).</p></td>
     </tr>
     <tr>
@@ -147,7 +148,7 @@ the core inflation measure for the second. The choice depends if interest is in
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list where each element of it contains the following:</p>
-<dt>data</dt><dd><p>Tibble with data used in fitting the model.</p></dd>
+<dt>data</dt><dd><p>A tibble with the data used in fitting the model.</p></dd>
 <dt>model</dt><dd><p>A <code>lm</code> object.</p></dd>
 <dt>n_obs</dt><dd><p>Number of observations of <code>y</code>.</p></dd>
 <dt>h</dt><dd><p>Horizon used in direct estimation.</p></dd>
@@ -156,7 +157,7 @@ the core inflation measure for the second. The choice depends if interest is in
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>For \(\pi\) being the healine inflation and \(\pi^*\)
-a core inflation measure, two specifications of regressions can be estimated through this
+a core inflation measure, two specifications of a regression model can be estimated through this
 function:</p><ol>
 <li><p>\(\pi_{t + h} - \pi_t =
  a_0 + \lambda_h(\pi_t - \pi^*_t) + \sum_{i = 1}^pa_i\pi_{t - i} +
@@ -190,7 +191,7 @@ function:</p><ol>
 #&gt;  8        -0.69                         NA          2.81
 #&gt;  9        -0.150                        NA          1.71
 #&gt; 10         1.41                         NA          1.7 
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[1]]$model
 #&gt; 
@@ -227,7 +228,7 @@ function:</p><ol>
 #&gt;  8        -0.69                         NA          2.81          2.62
 #&gt;  9        -0.150                        NA          1.71          2.81
 #&gt; 10         1.41                         NA          1.7           1.71
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[2]]$model
 #&gt; 
@@ -263,7 +264,7 @@ function:</p><ol>
 #&gt;  8              NA                        NA              NA
 #&gt;  9              NA                        NA              NA
 #&gt; 10              NA                        NA              NA
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[1]]$model
 #&gt; 
@@ -300,7 +301,7 @@ function:</p><ol>
 #&gt;  8              NA                        NA              NA              NA
 #&gt;  9              NA                        NA              NA              NA
 #&gt; 10              NA                        NA              NA              NA
-#&gt; # … with 292 more rows
+#&gt; # ... with 292 more rows
 #&gt; 
 #&gt; [[2]]$model
 #&gt; 

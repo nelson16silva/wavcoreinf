@@ -24,7 +24,7 @@ Headline inflation for estimation of a wavelet core inflation measure.}
 A vector of errors for every wavelet model considered.
 }
 \description{
-\code{model_error_wave} estimates the prediction error in a model
+\code{model_error_wave} estimates the prediction error of models
 fitted by the function \code{\link{model_est}} when the \code{x} variable
 is a wavelet-based signal estimation of \code{y}.
 For each new observation \code{k} included in the

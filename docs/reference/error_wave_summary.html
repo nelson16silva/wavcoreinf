@@ -34,7 +34,7 @@
 
 <meta property="og:title" content="Summarize Error Prediction Wavelet Models — error_wave_summary" />
 
-<meta property="og:description" content="This function calculates the mean of forecast errors for several horizons.
+<meta property="og:description" content="This function calculates the average forecast errors over forecasting horizons.
 Those errors are estimated by the function model_error_wave." />
 <meta name="twitter:card" content="summary" />
 
@@ -109,7 +109,7 @@ Those errors are estimated by the function model_error_wave." />
 
     <div class="ref-description">
     
-    <p>This function calculates the mean of forecast errors for several horizons.
+    <p>This function calculates the average forecast errors over forecasting horizons.
 Those errors are estimated by the function <code><a href='model_error_wave.html'>model_error_wave</a></code>.</p>
     
     </div>
@@ -121,7 +121,7 @@ Those errors are estimated by the function <code><a href='model_error_wave.html'
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>h</th>
-      <td><p>An positive integer to set the maximum horizon (\(1, 2, ..., h\)).</p></td>
+      <td><p>A positive integer that controls which maximum horizon is being used in forecasting (\(1, 2, ..., h\)).</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -132,8 +132,8 @@ Those errors are estimated by the function <code><a href='model_error_wave.html'
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble with the mean of error for all horizon <code>h</code> considered and
-for all estimated wavelet models.</p>
+    <p>A tibble with the average forecast errors for all horizon <code>h</code> considered and
+for all  wavelet models estimated.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -154,20 +154,18 @@ for all estimated wavelet models.</p>
   )
 )
 
-<span class='no'>wthr_args</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wav_args_wthr.html'>wav_args_wthr</a></span>(<span class='no'>wthr_wd</span>, <span class='no'>wthr_thr</span>, <span class='fl'>3</span>:<span class='fl'>5</span>)
-
+<span class='no'>wthr_args</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='wav_args_wthr.html'>wav_args_wthr</a></span>(<span class='no'>wthr_wd</span>, <span class='no'>wthr_thr</span>, <span class='fl'>3</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: `as.tibble()` is deprecated as of tibble 2.0.0.</span>
+#&gt; <span class='warning'>Please use `as_tibble()` instead.</span>
+#&gt; <span class='warning'>The signature and semantics have changed, see `?as_tibble`.</span>
+#&gt; <span class='warning'>This warning is displayed once every 8 hours.</span>
+#&gt; <span class='warning'>Call `lifecycle::last_warnings()` to see where this warning was generated.</span></div><div class='input'>
 <span class='no'>pq</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='lags.html'>lags</a></span>(<span class='fl'>2</span>, <span class='fl'>1</span>)
 
 <span class='no'>inf_head</span> <span class='kw'>&lt;-</span> <span class='no'>coreinf_br</span><span class='kw'>[[</span><span class='st'>"ipca"</span>]]
 
-<span class='fu'>error_wave_summary</span>(<span class='fl'>2</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>wthr_args</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>inf_head</span>, <span class='kw'>lags</span> <span class='kw'>=</span> <span class='no'>pq</span>, <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>RMSE</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'xts':</span>
-#&gt; <span class='message'>  method     from</span>
-#&gt; <span class='message'>  as.zoo.xts zoo </span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'quantmod':</span>
+<span class='fu'>error_wave_summary</span>(<span class='fl'>2</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>wthr_args</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>inf_head</span>, <span class='kw'>lags</span> <span class='kw'>=</span> <span class='no'>pq</span>, <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>RMSE</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'quantmod':</span>
 #&gt; <span class='message'>  method            from</span>
-#&gt; <span class='message'>  as.zoo.data.frame zoo </span></div><div class='output co'>#&gt; <span class='message'>Registered S3 methods overwritten by 'forecast':</span>
-#&gt; <span class='message'>  method             from    </span>
-#&gt; <span class='message'>  fitted.fracdiff    fracdiff</span>
-#&gt; <span class='message'>  residuals.fracdiff fracdiff</span></div><div class='output co'>#&gt; # A tibble: 72 x 1
+#&gt; <span class='message'>  as.zoo.data.frame zoo </span></div><div class='output co'>#&gt; # A tibble: 72 x 1
 #&gt;     error
 #&gt;     &lt;dbl&gt;
 #&gt;  1 NA    
@@ -180,7 +178,7 @@ for all estimated wavelet models.</p>
 #&gt;  8 NA    
 #&gt;  9  0.267
 #&gt; 10 NA    
-#&gt; # … with 62 more rows</div></pre>
+#&gt; # ... with 62 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

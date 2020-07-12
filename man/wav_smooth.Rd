@@ -24,8 +24,8 @@ This functional is a generic function that computes
 wavelet-based signals by mapping diferent arguments
 that can be used directly or indirectly in functions \code{wmta::\link[wmtsa]{wavShrink}}, \cr
 \code{EbayesThresh::\link[EbayesThresh]{ebayesthresh.wavelet}} and
-\code{wavethresh::\link[wavethresh]{threshold}}. Each signal
-estimated is a wavelet core inflation measure. \code{wav_smooth}
+\code{wavethresh::\link[wavethresh]{threshold}}. Each estimated signal
+is a wavelet core inflation measure. \code{wav_smooth}
 calls \code{\link{smooth_wavelet}} for the estimation of the wavelet-based signal.
 }
 \examples{

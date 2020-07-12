@@ -25,7 +25,7 @@ A numeric vector of length one.
 }
 \description{
 \code{model_error_wave_single} estimates the prediction
-error in a model fitted by the
+error of models fitted by the
 function \code{\link{model_est}} when the \code{x} variable is
 \code{y} smoothed by wavelet models. For each new observation
 \code{k} inlucluded in the out-of-sample set,

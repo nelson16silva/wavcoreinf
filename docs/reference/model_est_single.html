@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Direct Autoregression Model — model_est_single • wavcoreinf</title>
+<title>Direct Autoregressive Forecast Model — model_est_single • wavcoreinf</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,9 +32,9 @@
 
 
 
-<meta property="og:title" content="Direct Autoregression Model — model_est_single" />
+<meta property="og:title" content="Direct Autoregressive Forecast Model — model_est_single" />
 
-<meta property="og:description" content="Estimates a direct autoregression model." />
+<meta property="og:description" content="Estimates a direct autoregressive forecast model." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -101,14 +101,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Direct Autoregression Model</h1>
+    <h1>Direct Autoregressive Forecast Model</h1>
     
     <div class="hidden name"><code>model_est_single.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Estimates a direct autoregression model.</p>
+    <p>Estimates a direct autoregressive forecast model.</p>
     
     </div>
 
@@ -123,19 +123,19 @@
     </tr>
     <tr>
       <th>h</th>
-      <td><p>An integer, the horizon over which <code>y</code> is to be forecast.</p></td>
+      <td><p>An integer, the horizon from which <code>y</code> is being forecasted.</p></td>
     </tr>
     <tr>
       <th>lags</th>
       <td><p>A data frame with lags to begin and to stop. These
 lags can be indirectly obtaneid by the function <code>lags</code> as example
-bellow shows.</p></td>
+below shows.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list with following components:</p>
+    <p>A list of the following components:</p>
 <dt>model</dt><dd><p>A lm object.</p></dd>
 <dt>n_obs</dt><dd><p>Number of observations.</p></dd>
 <dt>h</dt><dd><p>The horizon.</p></dd>
@@ -148,7 +148,7 @@ bellow shows.</p></td>
 </ul><p><code>model_est_single</code> estimates the above regression for all indexes in the
 data frame <code>lags</code> (<code>p_start</code> \(\ge 1\)).</p>
 <p>Details section for the function <code><a href='model_est.html'>model_est</a></code> provides
-more information. Forecasting obtainded by the direct autoregression model
+more information. Forecasting obtainded by the direct autoregressive model
 can be compared with forecasting where lags of the core inflation
 measure are considered in the model as in <code><a href='model_est.html'>model_est</a></code> function.</p>
     
@@ -175,7 +175,7 @@ measure are considered in the model as in <code><a href='model_est.html'>model_e
 #&gt;  8 -0.229  2.00 
 #&gt;  9 -1.14   1.89 
 #&gt; 10 -1.73  -0.229
-#&gt; # … with 20 more rows
+#&gt; # ... with 20 more rows
 #&gt; 
 #&gt; [[1]]$model
 #&gt; 
@@ -209,7 +209,7 @@ measure are considered in the model as in <code><a href='model_est.html'>model_e
 #&gt;  8 -0.229  2.00  -0.421
 #&gt;  9 -1.14   1.89   2.00 
 #&gt; 10 -1.73  -0.229  1.89 
-#&gt; # … with 20 more rows
+#&gt; # ... with 20 more rows
 #&gt; 
 #&gt; [[2]]$model
 #&gt; 

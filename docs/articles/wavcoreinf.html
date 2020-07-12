@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Introduction to Wavelet Core Inflation • wavcoreinf</title>
+<title>Introduction to Wavelet-based Core Inflation Using wavcoreinf • wavcoreinf</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to Wavelet Core Inflation">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to Wavelet-based Core Inflation Using wavcoreinf">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -63,10 +63,10 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Introduction to Wavelet Core Inflation</h1>
+      <h1>Introduction to Wavelet-based Core Inflation Using wavcoreinf</h1>
                         <h4 class="author">Nelson Silva</h4>
             
-            <h4 class="date">2020-06-17</h4>
+            <h4 class="date">2020-07-08</h4>
       
       
       <div class="hidden name"><code>wavcoreinf.Rmd</code></div>
@@ -85,7 +85,7 @@
 <a class="sourceLine" id="cb1-8" title="8"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(lubridate)</a>
 <a class="sourceLine" id="cb1-9" title="9"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(forecast)</a>
 <a class="sourceLine" id="cb1-10" title="10"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ellipsis)</a></code></pre></div>
-<p>The main goal of this vignette is to construct an example showing how a wavelet core inflation measure can be obtained by wavcoreinf package. Then, this wavelet core is compared with others tranditional core inflation measures. The data are the same as in the database coreinf_br. This database contains headline inflation and core inflation measure for the Brazilian economy. The example is based on empirical Bayes thresholding on the levels of a wavelet transform methdod available in R package EbayesThresh. Measures based on others methods can be constructed in the same way.</p>
+<p>The main goal of this vignette is to construct an example showing how a wavelet-based core inflation measure can be obtained from the wavcoreinf package. Then, this wavelet-based core inflation measure is compared with other tranditional measures. Data is the same as in the database coreinf_br. This database contains the headline inflation and core inflation measures of the Brazilian economy. The example is based on empirical Bayes thresholding on the levels of a wavelet transform method that is available in the R package EbayesThresh. Measures based on other methods can be constructed in the same way.</p>
 <div id="data-brazilian-headline-inflation-and-core-inflation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#data-brazilian-headline-inflation-and-core-inflation" class="anchor"></a>Data: Brazilian Headline Inflation and Core Inflation</h2>
@@ -93,7 +93,7 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">n &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">433</span>, <span class="dv">11427</span>, <span class="dv">16121</span>, <span class="dv">27838</span>, <span class="dv">27839</span>, <span class="dv">11426</span>, <span class="dv">4466</span>, <span class="dv">16122</span>)</a>
 <a class="sourceLine" id="cb2-2" title="2">x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ipca"</span>, <span class="st">"ipcams"</span>, <span class="st">"ipcama"</span>, <span class="st">"ipcaex0"</span>, <span class="st">"ipcaex1"</span>, <span class="st">"ipcadp"</span>, <span class="st">"ipcaex2"</span>, <span class="st">"ipcaex3"</span>)</a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="co"># inf &lt;- getsgs(x, n)</span></a></code></pre></div>
-<p>Creating individual time series from 2006-07-01</p>
+<p>Creating individual time series from 2006-07-01 to 2019-08-01</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">coreinf_br2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(coreinf_br, date <span class="op">&gt;=</span><span class="st"> "2006-07-01"</span>)</a>
 <a class="sourceLine" id="cb3-2" title="2">date &lt;-<span class="st"> </span>coreinf_br2[[<span class="st">"date"</span>]]</a>
 <a class="sourceLine" id="cb3-3" title="3">ts_start &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw">year</span>(date[<span class="dv">1</span>]), <span class="kw">month</span>(date[<span class="dv">1</span>]))</a>
@@ -120,7 +120,12 @@
 <a class="sourceLine" id="cb5-11" title="11">  <span class="dt">prior =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"laplace"</span>, <span class="st">"cauchy"</span>)</a>
 <a class="sourceLine" id="cb5-12" title="12">)</a>
 <a class="sourceLine" id="cb5-13" title="13"></a>
-<a class="sourceLine" id="cb5-14" title="14">ebthr_args &lt;-<span class="st"> </span><span class="kw"><a href="../reference/wav_args_ebthr.html">wav_args_ebthr</a></span>(ebthr_xform, ebthr_wt, ebthr_ebwav)</a></code></pre></div>
+<a class="sourceLine" id="cb5-14" title="14">ebthr_args &lt;-<span class="st"> </span><span class="kw"><a href="../reference/wav_args_ebthr.html">wav_args_ebthr</a></span>(ebthr_xform, ebthr_wt, ebthr_ebwav)</a>
+<a class="sourceLine" id="cb5-15" title="15"><span class="co">#&gt; Warning: `as.tibble()` is deprecated as of tibble 2.0.0.</span></a>
+<a class="sourceLine" id="cb5-16" title="16"><span class="co">#&gt; Please use `as_tibble()` instead.</span></a>
+<a class="sourceLine" id="cb5-17" title="17"><span class="co">#&gt; The signature and semantics have changed, see `?as_tibble`.</span></a>
+<a class="sourceLine" id="cb5-18" title="18"><span class="co">#&gt; This warning is displayed once every 8 hours.</span></a>
+<a class="sourceLine" id="cb5-19" title="19"><span class="co">#&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</span></a></code></pre></div>
 <p>Determining prior “a” and mutating in ebthr_args$args_tbl</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">a &lt;-<span class="st"> </span>ebthr_args<span class="op">$</span>args_tbl <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb6-2" title="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="op">-</span>a) <span class="op">%&gt;%</span></a>
@@ -138,7 +143,7 @@
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">ebthr_smooth &lt;-<span class="st"> </span><span class="kw"><a href="../reference/wav_smooth.html">wav_smooth</a></span>(ipca, ebthr_args)</a>
 <a class="sourceLine" id="cb7-2" title="2"></a>
 <a class="sourceLine" id="cb7-3" title="3">ebthr_table &lt;-<span class="st"> </span><span class="kw"><a href="../reference/wcore_table.html">wcore_table</a></span>(ebthr_smooth, ipca)</a></code></pre></div>
-<p>Statistics for Evaluation of the wavelet core inflation, h = 3 and k = 15 just for fasting computation. More realistic h and k would be 12 and 24, respectively.</p>
+<p>Statistics for Evaluation of the wavelet core inflation, h = 3 and k = 15 only for faster computation. More realistic h and k could be 12 and 24, respectively.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">ebthr_error_mean &lt;-<span class="st"> </span><span class="kw"><a href="../reference/error_wave_summary.html">error_wave_summary</a></span>(<span class="dv">3</span>, <span class="dt">x =</span> ebthr_args, <span class="dt">y =</span> ipca, <span class="dt">lags =</span> pq, <span class="dt">k =</span> <span class="dv">15</span>, <span class="dt">RMSE =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb8-2" title="2"></a>
 <a class="sourceLine" id="cb8-3" title="3">ebthr_summary &lt;-<span class="st"> </span><span class="kw"><a href="../reference/wcore_summary_fcast.html">wcore_summary_fcast</a></span>(ipca, ebthr_table, ebthr_error_mean)</a></code></pre></div>
@@ -153,7 +158,7 @@
 <div id="analysis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#analysis" class="anchor"></a>Analysis</h2>
-<p>Tibble with headline inflation, tradional and wavelet core inflation</p>
+<p>Tibble with headline inflation, traditional and wavelet core inflation</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">inf &lt;-<span class="st"> </span><span class="kw">tibble</span>(</a>
 <a class="sourceLine" id="cb12-2" title="2">  <span class="dt">date =</span> <span class="kw"><a href="https://rdrr.io/r/stats/time.html">time</a></span>(ipca), ipca,</a>
 <a class="sourceLine" id="cb12-3" title="3">  <span class="st">`</span><span class="dt">IPCA-MS</span><span class="st">`</span> =<span class="st"> </span>ipcams,</a>
@@ -179,6 +184,7 @@
 <a class="sourceLine" id="cb13-8" title="8"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(.<span class="dv">8</span>, <span class="fl">.1</span>)) <span class="op">+</span><span class="st"> </span><span class="co"># legend.position = "bottom") +</span></a>
 <a class="sourceLine" id="cb13-9" title="9"><span class="st">  </span><span class="kw">scale_linetype_manual</span>(<span class="dt">values =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dt">Core =</span> <span class="st">"solid"</span>, <span class="dt">Headline =</span> <span class="st">"dashed"</span>))   </a></code></pre></div>
 <p><img src="wavcoreinf_files/figure-html/unnamed-chunk-14-1.png" width="691.2"></p>
+<p>Descriptive statistics for core inflation measures</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">inf <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb14-2" title="2"><span class="st">  </span><span class="kw">gather</span>(ipca<span class="op">:</span><span class="st">`</span><span class="dt">IPCA-BAYES2</span><span class="st">`</span>, <span class="dt">key =</span> <span class="st">"inf_core"</span>, <span class="dt">value =</span> <span class="st">"value"</span>) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb14-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(inf_core) <span class="op">%&gt;%</span></a>
@@ -190,17 +196,18 @@
 <a class="sourceLine" id="cb14-9" title="9">    <span class="dt">cv =</span> sd <span class="op">/</span><span class="st"> </span>mean,</a>
 <a class="sourceLine" id="cb14-10" title="10">    <span class="dt">tmean =</span> <span class="kw"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span>(value, ipca)<span class="op">$</span>p.value</a>
 <a class="sourceLine" id="cb14-11" title="11">  ) </a>
-<a class="sourceLine" id="cb14-12" title="12"><span class="co">#&gt; # A tibble: 8 x 7</span></a>
-<a class="sourceLine" id="cb14-13" title="13"><span class="co">#&gt;   inf_core     mean    min   max    sd    cv tmean</span></a>
-<a class="sourceLine" id="cb14-14" title="14"><span class="co">#&gt;   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb14-15" title="15"><span class="co">#&gt; 1 ipca        0.45  -0.23  1.32  0.281 0.624 1    </span></a>
-<a class="sourceLine" id="cb14-16" title="16"><span class="co">#&gt; 2 IPCA-BAYES2 0.448  0.169 0.799 0.169 0.377 0.944</span></a>
-<a class="sourceLine" id="cb14-17" title="17"><span class="co">#&gt; 3 IPCA-DP     0.450  0.07  0.86  0.180 0.400 0.998</span></a>
-<a class="sourceLine" id="cb14-18" title="18"><span class="co">#&gt; 4 IPCA-EX0    0.430 -0.09  1.23  0.231 0.538 0.484</span></a>
-<a class="sourceLine" id="cb14-19" title="19"><span class="co">#&gt; 5 IPCA-EX1    0.439 -0.13  1.34  0.221 0.504 0.707</span></a>
-<a class="sourceLine" id="cb14-20" title="20"><span class="co">#&gt; 6 IPCA-EX2    0.464 -0.09  0.98  0.215 0.464 0.613</span></a>
-<a class="sourceLine" id="cb14-21" title="21"><span class="co">#&gt; 7 IPCA-EX3    0.460 -0.08  0.94  0.206 0.447 0.715</span></a>
-<a class="sourceLine" id="cb14-22" title="22"><span class="co">#&gt; 8 IPCA-MS     0.435  0.15  0.84  0.150 0.344 0.556</span></a></code></pre></div>
+<a class="sourceLine" id="cb14-12" title="12"><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="co">#&gt; # A tibble: 8 x 7</span></a>
+<a class="sourceLine" id="cb14-14" title="14"><span class="co">#&gt;   inf_core     mean    min   max    sd    cv tmean</span></a>
+<a class="sourceLine" id="cb14-15" title="15"><span class="co">#&gt;   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb14-16" title="16"><span class="co">#&gt; 1 ipca        0.45  -0.23  1.32  0.281 0.624 1    </span></a>
+<a class="sourceLine" id="cb14-17" title="17"><span class="co">#&gt; 2 IPCA-BAYES2 0.448  0.169 0.799 0.169 0.377 0.944</span></a>
+<a class="sourceLine" id="cb14-18" title="18"><span class="co">#&gt; 3 IPCA-DP     0.450  0.07  0.86  0.180 0.400 0.998</span></a>
+<a class="sourceLine" id="cb14-19" title="19"><span class="co">#&gt; 4 IPCA-EX0    0.430 -0.09  1.23  0.231 0.538 0.484</span></a>
+<a class="sourceLine" id="cb14-20" title="20"><span class="co">#&gt; 5 IPCA-EX1    0.439 -0.13  1.34  0.221 0.504 0.707</span></a>
+<a class="sourceLine" id="cb14-21" title="21"><span class="co">#&gt; 6 IPCA-EX2    0.464 -0.09  0.98  0.215 0.464 0.613</span></a>
+<a class="sourceLine" id="cb14-22" title="22"><span class="co">#&gt; 7 IPCA-EX3    0.460 -0.08  0.94  0.206 0.447 0.715</span></a>
+<a class="sourceLine" id="cb14-23" title="23"><span class="co">#&gt; 8 IPCA-MS     0.435  0.15  0.84  0.150 0.344 0.556</span></a></code></pre></div>
 <p>n-period centered moving average</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">mavc_order &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">13</span>, <span class="dv">25</span>, <span class="dv">37</span>)</a>
 <a class="sourceLine" id="cb15-2" title="2"><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(mavc_order) &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">"mavc"</span>, mavc_order)</a>
@@ -236,7 +243,9 @@
 <a class="sourceLine" id="cb16-5" title="5"><span class="st">  </span><span class="kw">gather</span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">`</span><span class="dt">Teste-F</span><span class="st">`</span>, <span class="st">"R2"</span> ), <span class="dt">key =</span> <span class="st">"stats"</span>, <span class="dt">value =</span> <span class="st">"value"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb16-6" title="6"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb16-7" title="7"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> core, <span class="dt">y =</span> value)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb16-8" title="8"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>stats, <span class="dt">scales =</span> <span class="st">"free"</span>, <span class="dt">nrow =</span> <span class="dv">4</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb16-8" title="8"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>stats, <span class="dt">scales =</span> <span class="st">"free"</span>, <span class="dt">nrow =</span> <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb16-9" title="9"><span class="co">#&gt; Warning: attributes are not identical across measure variables;</span></a>
+<a class="sourceLine" id="cb16-10" title="10"><span class="co">#&gt; they will be dropped</span></a></code></pre></div>
 <p><img src="wavcoreinf_files/figure-html/unnamed-chunk-17-1.png" width="691.2"></p>
 <p>Dynamic adjustment: headline inflation equation</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">df_inf_core <span class="op">%&gt;%</span><span class="st"> </span></a>
@@ -250,7 +259,9 @@
 <a class="sourceLine" id="cb17-9" title="9"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> h, <span class="dt">y =</span> value)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb17-10" title="10"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>var, <span class="dt">nrow =</span> <span class="dv">3</span>) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb17-11" title="11"><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">3</span>, <span class="dv">24</span>, <span class="dt">by =</span> <span class="dv">3</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb17-12" title="12"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="kw"><a href="https://rdrr.io/r/base/substitute.html">quote</a></span>(lambda[h]))</a></code></pre></div>
+<a class="sourceLine" id="cb17-12" title="12"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="kw"><a href="https://rdrr.io/r/base/substitute.html">quote</a></span>(lambda[h]))</a>
+<a class="sourceLine" id="cb17-13" title="13"><span class="co">#&gt; Warning: attributes are not identical across measure variables;</span></a>
+<a class="sourceLine" id="cb17-14" title="14"><span class="co">#&gt; they will be dropped</span></a></code></pre></div>
 <p><img src="wavcoreinf_files/figure-html/unnamed-chunk-18-1.png" width="691.2"></p>
 <p>Dynamic adjustment: core inflation equation</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">df_inf_core <span class="op">%&gt;%</span><span class="st"> </span></a>
@@ -264,7 +275,9 @@
 <a class="sourceLine" id="cb18-9" title="9"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> h, <span class="dt">y =</span> value)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb18-10" title="10"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>var, <span class="dt">nrow =</span> <span class="dv">3</span>)<span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb18-11" title="11"><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">3</span>, <span class="dv">24</span>, <span class="dt">by =</span> <span class="dv">3</span>)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb18-12" title="12"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="kw"><a href="https://rdrr.io/r/base/substitute.html">quote</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"p_value ("</span>, lambda[h] <span class="op">^</span><span class="st"> "*"</span>,<span class="st">")"</span>)))</a></code></pre></div>
+<a class="sourceLine" id="cb18-12" title="12"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="kw"><a href="https://rdrr.io/r/base/substitute.html">quote</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"p_value ("</span>, lambda[h] <span class="op">^</span><span class="st"> "*"</span>,<span class="st">")"</span>)))</a>
+<a class="sourceLine" id="cb18-13" title="13"><span class="co">#&gt; Warning: attributes are not identical across measure variables;</span></a>
+<a class="sourceLine" id="cb18-14" title="14"><span class="co">#&gt; they will be dropped</span></a></code></pre></div>
 <p><img src="wavcoreinf_files/figure-html/unnamed-chunk-19-1.png" width="691.2"></p>
 <p>Forecasting</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">pq &lt;-<span class="st"> </span><span class="kw"><a href="../reference/lags.html">lags</a></span>(<span class="dv">2</span>, <span class="dv">2</span>)</a></code></pre></div>
@@ -310,7 +323,7 @@
 <a class="sourceLine" id="cb24-10" title="10"><span class="co">#&gt; 4     0.909      1.03       1.01      0.976      0.996      0.993</span></a>
 <a class="sourceLine" id="cb24-11" title="11"><span class="co">#&gt; 5     0.971      1.03       1.01      0.965      0.965      0.973</span></a>
 <a class="sourceLine" id="cb24-12" title="12"><span class="co">#&gt; 6     0.955      1.06       0.996     0.948      0.910      0.912</span></a>
-<a class="sourceLine" id="cb24-13" title="13"><span class="co">#&gt; # … with 2 more variables: ipca_bayes2_fcast &lt;dbl&gt;, ipca_fcast &lt;dbl&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb24-13" title="13"><span class="co">#&gt; # ... with 2 more variables: ipca_bayes2_fcast &lt;dbl&gt;, ipca_fcast &lt;dbl&gt;</span></a></code></pre></div>
 </div>
   </div>
 
