@@ -67,7 +67,7 @@
 <a href="#wavcoreinf" class="anchor"></a>wavcoreinf</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>wavcoreinf provides a flexible estimation and evaluation of wavelet core inflation from waveletbased signal estimation methods. Functionals are developed to facilitate the estimation of several specifications permitting the selection of the best one according to specific criteria established in the core inflation literature.</p>
+<p>wavcoreinf provides a flexible estimation and evaluation of core inflation from wavelet-based signal estimation methods. Functionals are developed to facilitate the estimation of several specifications permitting the selection of the best one according to specific criteria established in the core inflation literature.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -96,9 +96,9 @@
 <a class="sourceLine" id="cb3-2" title="2">x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ipca"</span>, <span class="st">"ipcams"</span>, <span class="st">"ipcama"</span>, <span class="st">"ipcaex0"</span>, <span class="st">"ipcaex1"</span>, <span class="st">"ipcadp"</span>, <span class="st">"ipcaex2"</span>, <span class="st">"ipcaex3"</span>)</a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="co"># inf &lt;- getsgs(x, n)</span></a></code></pre></div>
 </div>
-<div id="creating-individual-time-series-from-2006-07-01" class="section level3">
+<div id="creating-individual-time-series-from-2006-07-01-to-2019-08-01" class="section level3">
 <h3 class="hasAnchor">
-<a href="#creating-individual-time-series-from-2006-07-01" class="anchor"></a>Creating individual time series from 2006-07-01</h3>
+<a href="#creating-individual-time-series-from-2006-07-01-to-2019-08-01" class="anchor"></a>Creating individual time series from 2006-07-01 to 2019-08-01</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">coreinf_br2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(coreinf_br, date <span class="op">&gt;=</span><span class="st"> "2006-07-01"</span>)</a>
 <a class="sourceLine" id="cb4-2" title="2">date &lt;-<span class="st"> </span>coreinf_br2[[<span class="st">"date"</span>]]</a>
 <a class="sourceLine" id="cb4-3" title="3">ts_start &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw">year</span>(date[<span class="dv">1</span>]), <span class="kw">month</span>(date[<span class="dv">1</span>]))</a>
