@@ -4,8 +4,18 @@
 \alias{prior_alpha_beta}
 \title{Determine 	Hyperparameters for Bayesian Wavelet Thresholding}
 \usage{
-prior_alpha_beta(x, h, k, lags, par = c(0.5, 1), lower = c(0, 0),
-  upper = c(3, 3), control = list(), wtfunlist = list(), ...)
+prior_alpha_beta(
+  x,
+  h,
+  k,
+  lags,
+  par = c(0.5, 1),
+  lower = c(0, 0),
+  upper = c(3, 3),
+  control = list(),
+  wtfunlist = list(),
+  ...
+)
 }
 \arguments{
 \item{x}{A vector or a time series containing the data (headline inflation).}

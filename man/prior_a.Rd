@@ -4,8 +4,17 @@
 \alias{prior_a}
 \title{Determine Scale Factor Parameter "a" for Laplace Distribution}
 \usage{
-prior_a(x, h, k, lags, interval = c(0.1, 5), tol = 0.01,
-  wtfun = "dwt", wtfunlist = list(), ...)
+prior_a(
+  x,
+  h,
+  k,
+  lags,
+  interval = c(0.1, 5),
+  tol = 0.01,
+  wtfun = "dwt",
+  wtfunlist = list(),
+  ...
+)
 }
 \arguments{
 \item{x}{A vector or a time series containing the data (headline inflation).}

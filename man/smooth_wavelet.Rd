@@ -4,8 +4,7 @@
 \alias{smooth_wavelet}
 \title{Wavelet Denoising}
 \usage{
-smooth_wavelet(x, thfun = wavShrink, wtfun = NULL,
-  wtfunlist = list(), ...)
+smooth_wavelet(x, thfun = wavShrink, wtfun = NULL, wtfunlist = list(), ...)
 }
 \arguments{
 \item{x}{A numeric vector. If the data is not of length

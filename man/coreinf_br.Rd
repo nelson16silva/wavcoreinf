@@ -4,7 +4,8 @@
 \name{coreinf_br}
 \alias{coreinf_br}
 \title{Brazilian Inflation and Core Inflation Data}
-\format{An object of class (inherits from tbl, data.frame) with 302 rows and 9 columns.
+\format{
+An object of class (inherits from tbl, data.frame) with 302 rows and 9 columns.
 Monthly \% variation from 1994-07-01 to 2019-08-01.
 
 \describe{
@@ -39,7 +40,8 @@ food away from home groups.}
 
 \item{ipcaex3}{\emph{Broad national consumer price index - Core exclusion - EX3}. Considers
 only the underlying items of the services and industrial goods groups.}
-}}
+}
+}
 \source{
 Series can be obtained from function \code{\link{getsgs}} or by codes: 433, 11427, 16121,  27838,  27839,  11426,  4466, 16122
 in the \cr
