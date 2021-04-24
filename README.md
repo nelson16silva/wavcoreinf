@@ -20,7 +20,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("nelson16silva/wavcoreinf")
+devtools::install_github("nelson16silva/wavcoreinf", build_vignettes = TRUE)
 ```
 
 ## Example
@@ -117,4 +117,14 @@ inf %>%
   scale_linetype_manual(values = c(Core = "solid", Headline = "dashed"))   
 ```
 
-<img src="man/figures/README-plot-1.png" title=" Headline and Core Inflation Measures" alt=" Headline and Core Inflation Measures" width="100%" />
+<div class="figure">
+
+<img src="man/figures/README-plot-1.png" alt=" Headline and Core Inflation Measures" width="100%" />
+
+<p class="caption">
+
+Headline and Core Inflation Measures
+
+</p>
+
+</div>
