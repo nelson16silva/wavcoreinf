@@ -34,8 +34,11 @@ devtools::install_github("nelson16silva/wavcoreinf", build_vignettes = TRUE)
 
 This is a basic example which shows you how to obtain a good core inflation measure from wavelet. The wavcoreinf's vignette provides more information:
 
-vignette("wavcoreinf")\
+```{r, eval = FALSE}
+vignette("wavcoreinf")
 browseVignettes("wavcoreinf")
+```
+
 
 
 ```{r example, message = FALSE, warning = FALSE}

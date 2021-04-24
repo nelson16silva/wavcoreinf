@@ -29,8 +29,10 @@ This is a basic example which shows you how to obtain a good core
 inflation measure from wavelet. The wavcoreinf’s vignette provides more
 information:
 
-vignette(“wavcoreinf”)  
-browseVignettes(“wavcoreinf”)
+``` r
+vignette("wavcoreinf")
+browseVignettes("wavcoreinf")
+```
 
 ``` r
 library(wavcoreinf)
