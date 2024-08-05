@@ -16,7 +16,7 @@ LazyData: true
 Imports: 
     jsonlite, purrr, dplyr, magrittr, tibble, curl, rlang, EbayesThresh, waveslim,
     wavethresh, stats, forecast, lubridate, car, tidyr, ellipsis
-Remotes: nelson16silva/wavcoreinf, cran/wmtsa, cran/WiSEBoot, cran/ifultools
+Remotes: cran/ifultools, cran/wmtsa, cran/WiSEBoot, 
 RoxygenNote: 7.1.1
 Suggests: 
     knitr, rmarkdown, ggplot2, qpdf
