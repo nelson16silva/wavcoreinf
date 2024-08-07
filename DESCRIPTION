@@ -16,7 +16,7 @@ LazyData: true
 Imports: 
     jsonlite, purrr, dplyr, magrittr, tibble, curl, rlang, EbayesThresh, waveslim,
     wavethresh, stats, forecast, lubridate, car, tidyr, ellipsis, 
-    cran/ifultools, cran/wmtsa, cran/WiSEBoot
+    ifultools, wmtsa, WiSEBoot
 Remotes: cran/ifultools, cran/wmtsa, cran/WiSEBoot 
 RoxygenNote: 7.3.2
 Suggests: 
