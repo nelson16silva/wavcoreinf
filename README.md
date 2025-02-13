@@ -1,0 +1,136 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# wavcoreinf
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+wavcoreinf provides a flexible estimation and evaluation of core
+inflation from wavelet-based signal estimation methods. Functionals are
+developed to facilitate the estimation of several specifications
+permitting the selection of the best one according to specific criteria
+established in the core inflation literature.
+
+## Installation
+
+You can install the development version from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("nelson16silva/wavcoreinf", build_vignettes = TRUE)
+```
+
+## Example
+
+This is a basic example which shows you how to obtain a good core
+inflation measure from wavelet. The wavcoreinf’s vignette provides more
+information:
+
+``` r
+vignette("wavcoreinf")
+browseVignettes("wavcoreinf")
+```
+
+``` r
+library(wavcoreinf)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(tibble)
+library(purrr)
+library(rlang)
+library(lubridate)
+library(forecast)
+library(ellipsis)
+```
+
+### Brazilian Headline Inflation and Core Inflation
+
+``` r
+n <- c(433, 11427, 16121, 27838, 27839, 11426, 4466, 16122)
+x <- c("ipca", "ipcams", "ipcama", "ipcaex0", "ipcaex1", "ipcadp", "ipcaex2", "ipcaex3")
+# inf <- getsgs(x, n)
+```
+
+### Creating individual time series from 2006-07-01 to 2019-08-01
+
+``` r
+coreinf_br2 <- filter(coreinf_br, date >= "2006-07-01")
+date <- coreinf_br2[["date"]]
+ts_start <- c(year(date[1]), month(date[1]))
+for(i in seq_along(x)) {
+  assign(x[[i]], ts(coreinf_br2[[i + 1]], start = ts_start, freq = 12))
+}
+```
+
+### Wavelet Core Inflation
+
+``` r
+pq <- lags(2, 1)
+ebthr_xform <- list(wt = c("dwt", "modwt"))
+
+ebthr_wt <- list(
+  wf = c("haar", "la8"),
+  n.levels = 3:4
+)
+
+ebthr_ebwav <- list(
+  vscale = c("level", "independet"),
+  a = 3.83,
+  prior = c("laplace", "cauchy")
+)
+
+ebthr_args <- wav_args_ebthr(ebthr_xform, ebthr_wt, ebthr_ebwav)
+ebthr_smooth <- wav_smooth(ipca, ebthr_args)
+
+ebthr_table <- wcore_table(ebthr_smooth, ipca)
+ebthr_error_mean <- error_wave_summary(3, x = ebthr_args, y = ipca, lags = pq, k = 15, RMSE = TRUE)
+
+ebthr_summary <- wcore_summary_fcast(ipca, ebthr_table, ebthr_error_mean)
+ebthr_best <-  ebthr_summary %>% 
+  wcore_summary_best(d = c(1, 1, 1, 1, 2))
+
+ebthr_best_median <- wcore_best_median(ebthr_best)
+
+bayes2_ts <- ts(ebthr_best_median, start = ts_start, freq = 12)
+```
+
+### Plot
+
+``` r
+inf <- tibble(
+  date = time(ipca), ipca,
+  `IPCA-MS` = ipcams,
+  `IPCA-EX0` = ipcaex0,
+  `IPCA-EX1` = ipcaex1,
+  `IPCA-DP` = ipcadp,
+  `IPCA-EX2` = ipcaex2,
+  `IPCA-EX3` = ipcaex3,
+  `IPCA-BAYES2` = bayes2_ts[, 2]
+)
+
+inf %>%
+  gather(-1:-2, key = "measure", value = "core") %>%
+  ggplot(aes(x = date)) +
+  geom_line(aes(y = core, linetype = "Core")) +
+  facet_wrap(~measure, nrow = 4) +
+  geom_line(aes(y = ipca, linetype = "Headline")) +
+  labs(x = "", y = "%a.m", linetype = "") +
+  theme(legend.position = c(.8, .1)) + # legend.position = "bottom") +
+  scale_linetype_manual(values = c(Core = "solid", Headline = "dashed"))   
+```
+
+<div class="figure">
+
+<img src="man/figures/README-plot-1.png" alt=" Headline and Core Inflation Measures" width="100%" />
+
+<p class="caption">
+
+Headline and Core Inflation Measures
+
+</p>
+
+</div>
